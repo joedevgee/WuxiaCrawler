@@ -24,3 +24,10 @@ class BookItem(scrapy.Item):
     description = scrapy.Field(
         output_processor = TakeFirst(),
     )
+    published_time = scrapy.Field(
+        output_processor = TakeFirst(),
+    )
+    modified_time = scrapy.Field(
+        output_processor = TakeFirst(),
+    )
+

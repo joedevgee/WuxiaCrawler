@@ -6,6 +6,7 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import json
 import re
+import sqlite3 as lite
 from scrapy.exceptions import DropItem
 from wuxia.items import BookItem
 
@@ -45,3 +46,41 @@ class BookNamePipeline(object):
             # Clean book name, get rid of Chinese content and Index
         return item
 
+con = None  # db connection
+
+class SqlitePipeline(object):
+ 
+    def __init__(self):
+        self.setupDBCon()
+        self.dropBooksTable()
+        self.createBooksTable()
+ 
+    def process_item(self, item, spider):
+        # If it is BookItem
+        if isinstance(item, BookItem):
+            try:
+                self.cur.execute('insert into books values(?,?,?,?,?)',(item['id'],item['name'],item['description'],item['published_time'],item['modified_time']))
+                self.con.commit()
+            except:
+                print("Failed to insert book: %s" % item)
+        return item
+ 
+    def setupDBCon(self):
+        self.con = lite.connect('wuxia.db')
+        self.cur = self.con.cursor()
+ 
+    def __del__(self):
+        self.closeDB()
+ 
+    def createBooksTable(self):
+        # self.cur.execute("CREATE TABLE IF NOT EXISTS books(id INTEGER PRIMARY KEY NOT NULL, \
+        # name TEXT, \
+        # description TEXT \
+        # )")
+        self.cur.execute("""create table if not exists books (id INTEGER PRIMARY KEY NOT NULL,name TEXT NOT NULL,description TEXT NOT NULL,published_time TEXT NOT NULL,modified_time TEXT NOT NULL)""")
+ 
+    def dropBooksTable(self):
+        self.cur.execute("DROP TABLE IF EXISTS books")
+ 
+    def closeDB(self):
+        self.con.close()

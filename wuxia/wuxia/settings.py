@@ -68,6 +68,7 @@ ITEM_PIPELINES = {
     'wuxia.pipelines.IdPipeline': 1,
     'wuxia.pipelines.DuplicatedBookPipeline':2,
     'wuxia.pipelines.BookNamePipeline': 3,
+    'wuxia.pipelines.SqlitePipeline': 4,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

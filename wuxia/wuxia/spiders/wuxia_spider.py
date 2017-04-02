@@ -20,6 +20,8 @@ class WuxiaSpider(scrapy.Spider):
         l.add_xpath('id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
         l.add_xpath('name', '//meta[@property="og:title"]/@content')
         l.add_xpath('description','//meta[@name="description"]/@content')
+        l.add_xpath('published_time','//meta[@property="article:published_time"]/@content')
+        l.add_xpath('modified_time','//meta[@property="article:modified_time"]/@content')
         return l.load_item()
 
     # def parse_book(self, response):
