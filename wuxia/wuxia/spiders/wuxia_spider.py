@@ -1,10 +1,14 @@
 import scrapy
 from scrapy.loader import ItemLoader
-from wuxia.items import BookItem
+from wuxia.items import BookItem, ChapterItem
 
 class WuxiaSpider(scrapy.Spider):
 
     name = 'Spider'
+
+    allowed_domains = [
+        'wuxiaworld.com',
+    ]
 
     start_urls = [
         'http://www.wuxiaworld.com',
@@ -16,33 +20,29 @@ class WuxiaSpider(scrapy.Spider):
                 yield scrapy.Request(book, callback=self.parse_book)
 
     def parse_book(self, response):
+
+        # Scrape the book item
         l = ItemLoader(item=BookItem(), response=response)
         l.add_xpath('id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
         l.add_xpath('name', '//meta[@property="og:title"]/@content')
         l.add_xpath('description','//meta[@name="description"]/@content')
         l.add_xpath('published_time','//meta[@property="article:published_time"]/@content')
         l.add_xpath('modified_time','//meta[@property="article:modified_time"]/@content')
-        return l.load_item()
+        yield l.load_item()
 
-    # def parse_book(self, response):
-    #     book_title = response.xpath('//meta[@property="og:title"]/@content').re(r'(.+)\s\W')
-    #     book_abre = response.xpath('//a/@href').re_first(r'com\W(\w+)\W.+chapter')
-    #     book_desc = response.xpath('//meta[@name="description"]/@content').extract_first()
-    #     book_author = response.xpath
-    #     if book_title is not None and book_abre != "legend":
-    #         yield {
-    #             'title': book_title,
-    #             'abre': book_abre,
-    #             'desc': book_desc,
-    #         }
-    #         first_chapter = response.xpath('//a[contains(@href, "-chapter-1/")]/@href').extract_first()
-    #         yield scrapy.Request(first_chapter, callback=self.parse_chapters)
-        
+        # Scrape chapters link
+        first_chapter = response.xpath('//a/@href').re_first(r'http.+\w+\Wchapter\W\d+')
+        init_chapter_request = scrapy.Request(first_chapter,callback=self.parse_chapters)
+        # Send book id for chapters as reference to parent book
+        init_chapter_request.meta['book_id'] = response.xpath('//link[@rel="shortlink"]/@href').re_first('p\D(\d+)')
+        init_chapter_request.meta['book_name'] = response.xpath('//meta[@property="og:title"]/@content').extract_first()
+        yield init_chapter_request
+            
     def parse_chapters(self, response):
-        ch_title = response.xpath('//meta[@itemprop="headline"]/@content').extract_first()
-        ch_html = response.xpath('//div[@itemprop="articleBody"]').extract()
-        yield {
-            'article_title': ch_title,
-            'article_content': ch_html,
-        }
+        l = ItemLoader(item=ChapterItem(), response=response)
+        l.add_xpath('id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
+        l.add_xpath('name', '//meta[@property="og:title"]/@content')
+        l.add_value('parent_book_id', response.meta['book_id'])
+        l.add_value('parent_book_name', response.meta['book_name'])
+        yield l.load_item()
     

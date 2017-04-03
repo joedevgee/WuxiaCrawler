@@ -1,0 +1,997 @@
+2017-04-03 19:39:21 [scrapy.utils.log] INFO: Scrapy 1.3.3 started (bot: wuxia)
+2017-04-03 19:39:21 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'wuxia.spiders', 'SPIDER_MODULES': ['wuxia.spiders'], 'LOG_FILE': 'log.txt', 'BOT_NAME': 'wuxia'}
+2017-04-03 19:39:21 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-04-03 19:39:21 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-04-03 19:39:21 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-04-03 19:39:21 [scrapy.middleware] INFO: Enabled item pipelines:
+['wuxia.pipelines.IdPipeline',
+ 'wuxia.pipelines.DuplicatedPipeline',
+ 'wuxia.pipelines.BookNamePipeline',
+ 'wuxia.pipelines.SqlitePipeline']
+2017-04-03 19:39:21 [scrapy.core.engine] INFO: Spider opened
+2017-04-03 19:39:21 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-04-03 19:39:21 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com> (referer: None)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/7-killers/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/sfl-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/tgs-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/sr-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/tdg-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/spiritvessel-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/tgr-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/sotr-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/renegade-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/ti-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/rebirth-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/7-killers/>
+{'description': u'7 Killers Index Dragon 5th is a powerful lord with incredible martial arts, and yet is wasting away from a fatal disease. The only medicine which can cure his sickness lies in the clutches of his venemous ex-wife, Madam Lovesickness, and is guarded by 7 dangerous killers, fugitives of the martial wo...',
+ 'id': u'11480',
+ 'modified_time': u'2015-05-26T01:35:17+00:00',
+ 'name': u'7 Killers',
+ 'published_time': u'2015-05-21T21:23:12+00:00'}
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/pw-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/category/translator-thoughts/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/ldk-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/martialworld-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/author-spotlight-i-eat-tomatoes/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/author-spotlight/tang-jia-san-shao/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/sfl-index/>
+{'description': u'\u5929\u706b\u5927\u9053, aka Skyfire Avenue, is a scifi/fantasy webnovel by popular Chinese author Third Young Master of the Tang Family, aka Tang Jia San Shao (\u5510\u5bb6\u4e09\u5c11), the same author who wrote Douluo Dalu. \xa0This project\xa0is current being worked on\xa0by Xiao Lai.',
+ 'id': u'6614',
+ 'modified_time': u'2017-03-31T19:15:13+00:00',
+ 'name': u'Skyfire Avenue',
+ 'published_time': u'2015-03-16T21:52:42+00:00'}
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/issth-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/cores-in-chinese-cultivation-novels/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/mga-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/wuxiaxianxia-terms-of-address/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/deathblades-learning-chinese-faq/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/what-dao-heck-a-very-basic-primer-to-the-dao/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/chinese-idiom-glossary/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/tgs-index/>
+{'description': u"Genres: Action, Drama, Historical, Martial Arts, Psychological, Tragedy, Wuxia, Chinese Author: \u968f\u6ce2\u9010\u6d41 (Follow the Crowd) Status:\xa0224 Chapters (Completed) Raw Translator:\xa0Tannh\xe4user Editor: hweirdo (aka weirdo) Dramatis Person\xe6 Note from the Translator: Hi all, I've decided to take up this...",
+ 'id': u'117543',
+ 'modified_time': u'2017-03-27T20:16:46+00:00',
+ 'name': u'The Grandmaster Strategist',
+ 'published_time': u'2016-03-20T11:06:08+00:00'}
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/sr-index/>
+{'description': u'Ling Yu (\u7075\u57df) \u2013 Spirit Realm \U0001f329 a Chinese web novel by Against the Heavens (\u9006\u82cd\u5929) Current Status: Completed in Country of Origin (1841 Chapters) Genre Tags: action, adventure, fantasy, mature Translated by Alyschu&Co SR Team: alyschu, OverTheRanbow, Dabuyu, Craxuan, wyhcwe, doom Offi...',
+ 'id': u'70977',
+ 'modified_time': u'2017-04-03T16:26:01+00:00',
+ 'name': u'Spirit Realm',
+ 'published_time': u'2016-07-31T18:24:20+00:00'}
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/tdg-index/>
+{'description': u'S Y N O P S I S Killed by a Sage Emperor and reborn as his 13 year old self, Nie Li was given a second chance at life. A second chance to change everything, save his loved ones and his beloved city. He shall once again battle with the Sage Emperor to avenge his death.',
+ 'id': u'29205',
+ 'modified_time': u'2016-11-06T05:17:55+00:00',
+ 'name': u'Tales of DemonsGods',
+ 'published_time': u'2015-10-30T14:20:40+00:00'}
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/faq/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/terms-of-service/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/master-index/7-killers-chapter-1/> from <GET http://www.wuxiaworld.com/master-index/7-killers-chapter-1>
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/about-donations/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/spiritvessel-index/>
+{'description': u'Genres:\xa0Action, Adventure, Comedy, Fantasy, Harem, Martial Arts, Romance, Tragedy, Xianxia, Chinese Author: Jiu Dang Jia (\u4e5d\u5f53\u5bb6) Status: 1150 Chapters (Complete) Translator:\xa0Bao Synopsis Spirit Vessel takes place in a mysterious world.',
+ 'id': u'114897',
+ 'modified_time': u'2017-04-02T02:08:43+00:00',
+ 'name': u'Spirit Vessel',
+ 'published_time': u'2016-03-16T06:59:01+00:00'}
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/tgr-index/>
+{'description': u'S Y N O P S I S The Great Thousand World. It is a place where numerous planes intersect, a place where many clans live and a place where a group of lords assemble.',
+ 'id': u'24409',
+ 'modified_time': u'2017-03-12T18:22:10+00:00',
+ 'name': u'The Great Ruler',
+ 'published_time': u'2015-09-19T04:27:43+00:00'}
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/sotr-index/>
+{'description': u'Written by Plow Days\xa0(\u7281\u5929) Synopsis:\xa0Jiang Chen, son of the Heavenly Emperor, unexpectedly reincarnated into the body of a despised young noble, thus embarking on the path of the underdog trouncing all comers.',
+ 'id': u'48514',
+ 'modified_time': u'2017-03-30T11:38:56+00:00',
+ 'name': u'Sovereign of the Three Realms',
+ 'published_time': u'2016-02-29T08:50:04+00:00'}
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/renegade-index/>
+{'description': u'Translated by Rex Edited by Lucas Renegade Immortal / Xian Ni (\u4ed9\u9006) - Wang Lin is a very smart boy with loving parents. Although he and his parents are shunned by the rest of their relatives, his parents have always held high hopes that he will one day become someone great.',
+ 'id': u'42349',
+ 'modified_time': u'2017-04-01T22:50:32+00:00',
+ 'name': u'Renegade Immortal',
+ 'published_time': u'2016-01-16T22:06:03+00:00'}
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/ti-index/>
+{'description': u'Terror Infinity Title: Terror Infinity (\u65e0\u9650\u6050\u6016) Author: Zhttty Raw:\xa0http://read.qidian.com/BookReader/GRDz5lIOiE41.aspx Tags: Sci-fi, Survival, Horror, Little Romance Synopsis:\xa0\u201cWant to know the meaning of life? Want to live\u2026 a real life?\u201d The world changes when you click YES. In God\u2019s dimension, you have to keep getting stronger, keep evolving to survive one horror movie after another.',
+ 'id': u'58903',
+ 'modified_time': u'2017-02-23T21:27:35+00:00',
+ 'name': u'Terror Infinity',
+ 'published_time': u'2016-05-13T04:56:08+00:00'}
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/contact-us/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/about-wuxiaworld/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/ssn-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/rebirth-index/>
+{'description': u'Author: Mad Snail (\u767c\u98c6\u7684\u8778\u725b) Translator: LittleShanks Proofreader:\xa0Bigredcomrade,\xa0Flowerbridgetoo Links to Raw Note: Author of Tales of Demons and Gods TRANSLATOR\u2019S SYNOPSIS V.1.',
+ 'id': u'76206',
+ 'modified_time': u'2017-03-23T04:26:12+00:00',
+ 'name': u'Rebirth of the Thief Who Roamed the World',
+ 'published_time': u'2016-09-09T11:35:56+00:00'}
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/pw-index/>
+{'description': u'Perfect World (\u5b8c\u7f8e\u4e16\u754c) is a Chinese web novel by Chen Dong (\u8fb0\u4e1c). It is currently ongoing with over 1600 chapters. It belongs in the \u201cXuan Huan\u201d category and the subcategory of \u201cEastern Fantasy\u201d. If you are interested in helping out, email me at Pikatranslations@yahoo.',
+ 'id': u'37653',
+ 'modified_time': u'2017-04-02T23:55:57+00:00',
+ 'name': u'Perfect World',
+ 'published_time': u'2015-12-20T07:01:10+00:00'}
+2017-04-03 19:39:21 [scrapy.core.scraper] ERROR: Error processing {'description': u'Content filed under the Translator Thoughts category.',
+ 'name': u'Translator Thoughts'}
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/DogMaster/Desktop/WuxiaCrawler/wuxia/wuxia/pipelines.py", line 16, in process_item
+    if item['id']:
+  File "/usr/local/lib/python2.7/site-packages/scrapy/item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'id'
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/ldk-index/>
+{'description': u'The Legend of the Dragon King (\u9f99\u738b\u4f20\u8bf4) by Tang Jia San Shao Synopsis: Following the advancement of soul technology, the humans of Douluo Continent conquered the ocean and discovered two new continents. After being hunted by spirit masters\xa0excessively, the soul beasts are nearly extinct.',
+ 'id': u'88655',
+ 'modified_time': u'2017-03-27T02:55:36+00:00',
+ 'name': u'Legend of the Dragon King',
+ 'published_time': u'2016-11-24T22:15:23+00:00'}
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/martialworld-index/>
+{'description': u'\xa0 Synopsis: In the Realm of the Gods, countless legends fought over a mysterious cube. After the battle it disappeared into the void. Lin Ming stumbles upon this mystery object and begins his journey to become a hero of the land.',
+ 'id': u'109604',
+ 'modified_time': u'2017-04-01T20:00:51+00:00',
+ 'name': u'Martial World',
+ 'published_time': u'2016-12-31T14:32:50+00:00'}
+2017-04-03 19:39:21 [root] ERROR: This is not a book, missing index in {'description': u"Hey everyone, we all love the novels, but barely anyone knows anything about the authors behind the novels.\xa0So, check out the long-awaited second installment of the Author Spotlight series! So for those who were there for the first one... Yea. I'm a weeeeeeeeeeeee bit late...",
+ 'id': u'94855',
+ 'modified_time': u'2017-02-26T15:14:05+00:00',
+ 'name': u'Author Spotlight: I Eat Tomatoes',
+ 'published_time': u'2016-12-31T21:08:25+00:00'}
+2017-04-03 19:39:21 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'description': u"Hey everyone, we all love the novels, but barely anyone knows anything about the authors behind the novels.\xa0So, check out the long-awaited second installment of the Author Spotlight series! So for those who were there for the first one... Yea. I'm a weeeeeeeeeeeee bit late...",
+ 'id': u'94855',
+ 'modified_time': u'2017-02-26T15:14:05+00:00',
+ 'name': u'Author Spotlight: I Eat Tomatoes',
+ 'published_time': u'2016-12-31T21:08:25+00:00'}
+{'description': u"Hey everyone, we all love the novels, but barely anyone knows anything about the authors behind the novels.\xa0So, check out the long-awaited second installment of the Author Spotlight series! So for those who were there for the first one... Yea. I'm a weeeeeeeeeeeee bit late...",
+ 'id': u'94855',
+ 'modified_time': u'2017-02-26T15:14:05+00:00',
+ 'name': u'Author Spotlight: I Eat Tomatoes',
+ 'published_time': u'2016-12-31T21:08:25+00:00'}
+2017-04-03 19:39:21 [root] ERROR: This is not a book, missing index in {'description': u'Alias: Tang Jia San Shao (\u5510\u5bb6\u4e09\u5c11) Real name: Zhang Wei (\u5f20\u5a01) Flagship work: Douluo Dalu Born in 1981, January 10th. (35 years old in 2016) Born in Beijing, China Personal Life: Origin of Alias: His name comes from the fact that as a child, he liked to add\xa0three small spoons of sugar to his...',
+ 'id': u'62295',
+ 'modified_time': u'2016-12-26T23:52:08+00:00',
+ 'name': u'Tang Jia San Shao',
+ 'published_time': u'2016-06-03T02:56:02+00:00'}
+2017-04-03 19:39:21 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'description': u'Alias: Tang Jia San Shao (\u5510\u5bb6\u4e09\u5c11) Real name: Zhang Wei (\u5f20\u5a01) Flagship work: Douluo Dalu Born in 1981, January 10th. (35 years old in 2016) Born in Beijing, China Personal Life: Origin of Alias: His name comes from the fact that as a child, he liked to add\xa0three small spoons of sugar to his...',
+ 'id': u'62295',
+ 'modified_time': u'2016-12-26T23:52:08+00:00',
+ 'name': u'Tang Jia San Shao',
+ 'published_time': u'2016-06-03T02:56:02+00:00'}
+{'description': u'Alias: Tang Jia San Shao (\u5510\u5bb6\u4e09\u5c11) Real name: Zhang Wei (\u5f20\u5a01) Flagship work: Douluo Dalu Born in 1981, January 10th. (35 years old in 2016) Born in Beijing, China Personal Life: Origin of Alias: His name comes from the fact that as a child, he liked to add\xa0three small spoons of sugar to his...',
+ 'id': u'62295',
+ 'modified_time': u'2016-12-26T23:52:08+00:00',
+ 'name': u'Tang Jia San Shao',
+ 'published_time': u'2016-06-03T02:56:02+00:00'}
+2017-04-03 19:39:21 [scrapy.dupefilters] DEBUG: Filtered duplicate request: <GET http://www.wuxiaworld.com/usaw-book-2-chapter-179> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/godofcrime-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/general-glossary-of-terms/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/sfl-index/skyfire-avenue-chapter-401/> from <GET http://www.wuxiaworld.com/sfl-index/skyfire-avenue-chapter-401>
+2017-04-03 19:39:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/emperorofsoloplay-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:21 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/dragonmakenwar-index/> from <GET http://www.wuxiaworld.com/dragonmakenwar-index>
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/issth-index/>
+{'description': u'New to ISSTH? Click here for some information and reviews ISSTH official art gallery (be warned, it contains spoilers) Wiki of Terms, Places and People New glossary (specifically for book 6 Report typos and other mistakes here Meme Archives Buy cool xianxia inspired T-shirts here Table of Contents N...',
+ 'id': u'11242',
+ 'modified_time': u'2017-04-02T02:21:21+00:00',
+ 'name': u'I Shall Seal the Heavens',
+ 'published_time': u'2015-05-18T00:04:30+00:00'}
+2017-04-03 19:39:21 [root] ERROR: This is not a book, missing index in {'description': u'\u201cCores\u201d appear quite often in Chinese cultivation novels (Xianxia, Xuanhuan, etc). But what exactly are they? There are generally two types of Cores \u2013 the type belonging to beasts/monsters, and the type belonging to cultivators.',
+ 'id': u'88151',
+ 'modified_time': u'2016-11-21T08:19:13+00:00',
+ 'name': u'\u201cCores\u201d in Chinese Cultivation Novels',
+ 'published_time': u'2016-11-21T08:19:13+00:00'}
+2017-04-03 19:39:21 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'description': u'\u201cCores\u201d appear quite often in Chinese cultivation novels (Xianxia, Xuanhuan, etc). But what exactly are they? There are generally two types of Cores \u2013 the type belonging to beasts/monsters, and the type belonging to cultivators.',
+ 'id': u'88151',
+ 'modified_time': u'2016-11-21T08:19:13+00:00',
+ 'name': u'\u201cCores\u201d in Chinese Cultivation Novels',
+ 'published_time': u'2016-11-21T08:19:13+00:00'}
+{'description': u'\u201cCores\u201d appear quite often in Chinese cultivation novels (Xianxia, Xuanhuan, etc). But what exactly are they? There are generally two types of Cores \u2013 the type belonging to beasts/monsters, and the type belonging to cultivators.',
+ 'id': u'88151',
+ 'modified_time': u'2016-11-21T08:19:13+00:00',
+ 'name': u'\u201cCores\u201d in Chinese Cultivation Novels',
+ 'published_time': u'2016-11-21T08:19:13+00:00'}
+2017-04-03 19:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/mga-index/>
+{'description': u'Martial God Asura (\u4fee\u7f57\u6b66\u795e Xiu Luo Wu Shen) is an ongoing Chinese web novel by\xa0\u201cKindhearted Bee\u201d (\u5584\u826f\u7684\u871c\u8702 Shan Liang de Mi Feng) with 2400+ chapters. This novel is currently being translated by\xa0flowerbridgetoo (FBT).',
+ 'id': u'11821',
+ 'modified_time': u'2017-01-11T01:58:04+00:00',
+ 'name': u'Martial God Asura',
+ 'published_time': u'2015-05-25T20:03:15+00:00'}
+2017-04-03 19:39:21 [root] ERROR: This is not a book, missing index in {'description': u'Terms of Address in Wuxia, Xianxia & Xuanhuan\xa0Novels Family In Chinese culture, some of the terms of address for family members (\u201cbrother/sister\u201d, \u201cuncle/aunt\u201d, etc\u2026) can also be used for friends, neighbors, and even strangers.',
+ 'id': u'88152',
+ 'modified_time': u'2016-12-06T12:30:44+00:00',
+ 'name': u'Wuxia-Xianxia Terms of Address',
+ 'published_time': u'2016-11-21T08:20:40+00:00'}
+2017-04-03 19:39:21 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'description': u'Terms of Address in Wuxia, Xianxia & Xuanhuan\xa0Novels Family In Chinese culture, some of the terms of address for family members (\u201cbrother/sister\u201d, \u201cuncle/aunt\u201d, etc\u2026) can also be used for friends, neighbors, and even strangers.',
+ 'id': u'88152',
+ 'modified_time': u'2016-12-06T12:30:44+00:00',
+ 'name': u'Wuxia-Xianxia Terms of Address',
+ 'published_time': u'2016-11-21T08:20:40+00:00'}
+{'description': u'Terms of Address in Wuxia, Xianxia & Xuanhuan\xa0Novels Family In Chinese culture, some of the terms of address for family members (\u201cbrother/sister\u201d, \u201cuncle/aunt\u201d, etc\u2026) can also be used for friends, neighbors, and even strangers.',
+ 'id': u'88152',
+ 'modified_time': u'2016-12-06T12:30:44+00:00',
+ 'name': u'Wuxia-Xianxia Terms of Address',
+ 'published_time': u'2016-11-21T08:20:40+00:00'}
+2017-04-03 19:39:22 [root] ERROR: This is not a book, missing index in {'description': u'I often see questions asking about learning Chinese. How hard is it? How long does it take? Where to start? Below are some of the questions I see most often, along with my answers. Please note that this is just my opinion, based on having studied Chinese for about 7 years or so.',
+ 'id': u'43096',
+ 'modified_time': u'2016-04-20T00:30:20+00:00',
+ 'name': u'Deathblade\u2019s Learning Chinese FAQ',
+ 'published_time': u'2016-01-23T00:53:31+00:00'}
+2017-04-03 19:39:22 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'description': u'I often see questions asking about learning Chinese. How hard is it? How long does it take? Where to start? Below are some of the questions I see most often, along with my answers. Please note that this is just my opinion, based on having studied Chinese for about 7 years or so.',
+ 'id': u'43096',
+ 'modified_time': u'2016-04-20T00:30:20+00:00',
+ 'name': u'Deathblade\u2019s Learning Chinese FAQ',
+ 'published_time': u'2016-01-23T00:53:31+00:00'}
+{'description': u'I often see questions asking about learning Chinese. How hard is it? How long does it take? Where to start? Below are some of the questions I see most often, along with my answers. Please note that this is just my opinion, based on having studied Chinese for about 7 years or so.',
+ 'id': u'43096',
+ 'modified_time': u'2016-04-20T00:30:20+00:00',
+ 'name': u'Deathblade\u2019s Learning Chinese FAQ',
+ 'published_time': u'2016-01-23T00:53:31+00:00'}
+2017-04-03 19:39:22 [root] ERROR: This is not a book, missing index in {'description': u'According to the Classic of the Dao, \u2018The Dao that can be spoken is not the eternal Dao\u2019, which makes an effort to describe it a bit pointless.\xa0 Buuuut, I\u2019m going to do my best to shed at least a little bit of light on one particularly popular and fundamental part of Daoism that you might see...',
+ 'id': u'49144',
+ 'modified_time': u'2016-03-10T12:13:02+00:00',
+ 'name': u'What Dao Heck?  A Very Basic Primer to the Dao',
+ 'published_time': u'2016-03-03T21:08:03+00:00'}
+2017-04-03 19:39:22 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'description': u'According to the Classic of the Dao, \u2018The Dao that can be spoken is not the eternal Dao\u2019, which makes an effort to describe it a bit pointless.\xa0 Buuuut, I\u2019m going to do my best to shed at least a little bit of light on one particularly popular and fundamental part of Daoism that you might see...',
+ 'id': u'49144',
+ 'modified_time': u'2016-03-10T12:13:02+00:00',
+ 'name': u'What Dao Heck?  A Very Basic Primer to the Dao',
+ 'published_time': u'2016-03-03T21:08:03+00:00'}
+{'description': u'According to the Classic of the Dao, \u2018The Dao that can be spoken is not the eternal Dao\u2019, which makes an effort to describe it a bit pointless.\xa0 Buuuut, I\u2019m going to do my best to shed at least a little bit of light on one particularly popular and fundamental part of Daoism that you might see...',
+ 'id': u'49144',
+ 'modified_time': u'2016-03-10T12:13:02+00:00',
+ 'name': u'What Dao Heck?  A Very Basic Primer to the Dao',
+ 'published_time': u'2016-03-03T21:08:03+00:00'}
+2017-04-03 19:39:22 [root] ERROR: This is not a book, missing index in {'description': u'A partial list of Chinese idioms and phrases which commonly appear in Chinese novels \u2013 particularly in the Wuxia, Xianxia & Xuanhuan genres. The Weak are Prey to the Strong (\u5f31\u8089\u5f3a\u98df ru\xf2 r\xf2u qi\xe1ng sh\xed) Meaning: the law of the jungle; \u201cMight makes Right\u201d Didn\u2019t know whether to Lau...',
+ 'id': u'88153',
+ 'modified_time': u'2016-11-21T08:24:07+00:00',
+ 'name': u'Chinese Idiom Glossary',
+ 'published_time': u'2016-11-21T08:22:54+00:00'}
+2017-04-03 19:39:22 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'description': u'A partial list of Chinese idioms and phrases which commonly appear in Chinese novels \u2013 particularly in the Wuxia, Xianxia & Xuanhuan genres. The Weak are Prey to the Strong (\u5f31\u8089\u5f3a\u98df ru\xf2 r\xf2u qi\xe1ng sh\xed) Meaning: the law of the jungle; \u201cMight makes Right\u201d Didn\u2019t know whether to Lau...',
+ 'id': u'88153',
+ 'modified_time': u'2016-11-21T08:24:07+00:00',
+ 'name': u'Chinese Idiom Glossary',
+ 'published_time': u'2016-11-21T08:22:54+00:00'}
+{'description': u'A partial list of Chinese idioms and phrases which commonly appear in Chinese novels \u2013 particularly in the Wuxia, Xianxia & Xuanhuan genres. The Weak are Prey to the Strong (\u5f31\u8089\u5f3a\u98df ru\xf2 r\xf2u qi\xe1ng sh\xed) Meaning: the law of the jungle; \u201cMight makes Right\u201d Didn\u2019t know whether to Lau...',
+ 'id': u'88153',
+ 'modified_time': u'2016-11-21T08:24:07+00:00',
+ 'name': u'Chinese Idiom Glossary',
+ 'published_time': u'2016-11-21T08:22:54+00:00'}
+2017-04-03 19:39:22 [root] ERROR: This is not a book, missing index in {'description': u'What is Wuxiaworld? We are a growing group of translators who bring popular Chinese fiction to the English speaking world. The website was founded on December 22, 2014 by RWX, translator of Coiling Dragon, Horizon, Bright Moon, Saber, and other novels.',
+ 'id': u'5485',
+ 'modified_time': u'2016-10-26T07:18:30+00:00',
+ 'name': u'FAQ',
+ 'published_time': u'2015-03-05T01:36:10+00:00'}
+2017-04-03 19:39:22 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'description': u'What is Wuxiaworld? We are a growing group of translators who bring popular Chinese fiction to the English speaking world. The website was founded on December 22, 2014 by RWX, translator of Coiling Dragon, Horizon, Bright Moon, Saber, and other novels.',
+ 'id': u'5485',
+ 'modified_time': u'2016-10-26T07:18:30+00:00',
+ 'name': u'FAQ',
+ 'published_time': u'2015-03-05T01:36:10+00:00'}
+{'description': u'What is Wuxiaworld? We are a growing group of translators who bring popular Chinese fiction to the English speaking world. The website was founded on December 22, 2014 by RWX, translator of Coiling Dragon, Horizon, Bright Moon, Saber, and other novels.',
+ 'id': u'5485',
+ 'modified_time': u'2016-10-26T07:18:30+00:00',
+ 'name': u'FAQ',
+ 'published_time': u'2015-03-05T01:36:10+00:00'}
+2017-04-03 19:39:22 [root] ERROR: This is not a book, missing index in {'description': u'Web Site Terms and Conditions of Use 1. Terms By accessing this web site, you are agreeing to be bound by these web site Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.',
+ 'id': u'54969',
+ 'modified_time': u'2016-11-12T22:05:48+00:00',
+ 'name': u'Terms of Service',
+ 'published_time': u'2016-04-13T06:50:59+00:00'}
+2017-04-03 19:39:22 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'description': u'Web Site Terms and Conditions of Use 1. Terms By accessing this web site, you are agreeing to be bound by these web site Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.',
+ 'id': u'54969',
+ 'modified_time': u'2016-11-12T22:05:48+00:00',
+ 'name': u'Terms of Service',
+ 'published_time': u'2016-04-13T06:50:59+00:00'}
+{'description': u'Web Site Terms and Conditions of Use 1. Terms By accessing this web site, you are agreeing to be bound by these web site Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.',
+ 'id': u'54969',
+ 'modified_time': u'2016-11-12T22:05:48+00:00',
+ 'name': u'Terms of Service',
+ 'published_time': u'2016-04-13T06:50:59+00:00'}
+2017-04-03 19:39:22 [root] ERROR: This is not a book, missing index in {'description': u"A MORTAL'S JOURNEY TO IMMORTALITY doubledd:\xa0I am currently releasing 6-7 regular chapters a week. ABSOLUTE CHOICE CKtalon: I am currently releasing 12 regular chapters a week. $60 for each sponsored chapter. Patreon:\xa0https://www.patreon.",
+ 'id': u'108',
+ 'modified_time': u'2017-04-03T14:47:25+00:00',
+ 'name': u'Release Schedule',
+ 'published_time': u'2014-12-20T01:19:23+00:00'}
+2017-04-03 19:39:22 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'description': u"A MORTAL'S JOURNEY TO IMMORTALITY doubledd:\xa0I am currently releasing 6-7 regular chapters a week. ABSOLUTE CHOICE CKtalon: I am currently releasing 12 regular chapters a week. $60 for each sponsored chapter. Patreon:\xa0https://www.patreon.",
+ 'id': u'108',
+ 'modified_time': u'2017-04-03T14:47:25+00:00',
+ 'name': u'Release Schedule',
+ 'published_time': u'2014-12-20T01:19:23+00:00'}
+{'description': u"A MORTAL'S JOURNEY TO IMMORTALITY doubledd:\xa0I am currently releasing 6-7 regular chapters a week. ABSOLUTE CHOICE CKtalon: I am currently releasing 12 regular chapters a week. $60 for each sponsored chapter. Patreon:\xa0https://www.patreon.",
+ 'id': u'108',
+ 'modified_time': u'2017-04-03T14:47:25+00:00',
+ 'name': u'Release Schedule',
+ 'published_time': u'2014-12-20T01:19:23+00:00'}
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/tgs-index/tgs-chapter-1/> from <GET http://www.wuxiaworld.com/tgs-index/tgs-chapter-1>
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/atd-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:22 [root] ERROR: This is not a book, missing index in {'description': u'BUSINESS: For advertising inquiries, please reach out to us at affiliate@wuxiaworld.com To report malicious ads (porn, ads that autoplay sound, redirect ads, viruses, etc.), please report them to us at badads@wuxiaworld.',
+ 'id': u'41666',
+ 'modified_time': u'2017-01-10T02:52:15+00:00',
+ 'name': u'Contact Us',
+ 'published_time': u'2016-01-11T20:59:30+00:00'}
+2017-04-03 19:39:22 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'description': u'BUSINESS: For advertising inquiries, please reach out to us at affiliate@wuxiaworld.com To report malicious ads (porn, ads that autoplay sound, redirect ads, viruses, etc.), please report them to us at badads@wuxiaworld.',
+ 'id': u'41666',
+ 'modified_time': u'2017-01-10T02:52:15+00:00',
+ 'name': u'Contact Us',
+ 'published_time': u'2016-01-11T20:59:30+00:00'}
+{'description': u'BUSINESS: For advertising inquiries, please reach out to us at affiliate@wuxiaworld.com To report malicious ads (porn, ads that autoplay sound, redirect ads, viruses, etc.), please report them to us at badads@wuxiaworld.',
+ 'id': u'41666',
+ 'modified_time': u'2017-01-10T02:52:15+00:00',
+ 'name': u'Contact Us',
+ 'published_time': u'2016-01-11T20:59:30+00:00'}
+2017-04-03 19:39:22 [root] ERROR: This is not a book, missing index in {'description': u'ABOUT WUXIAWORLD(\u2122) Wuxiaworld.com, owned by Wuxiaworld Limited, was founded in December of 2014 by RWX, a\xa0passionate fan of Wuxia novels. \xa0It quickly rose to prominence as the largest Chinese-to-English novel translation platform in the world.',
+ 'id': u'106',
+ 'modified_time': u'2017-02-27T03:04:00+00:00',
+ 'name': u'About Wuxiaworld(\u2122)',
+ 'published_time': u'2014-12-20T01:08:20+00:00'}
+2017-04-03 19:39:22 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'description': u'ABOUT WUXIAWORLD(\u2122) Wuxiaworld.com, owned by Wuxiaworld Limited, was founded in December of 2014 by RWX, a\xa0passionate fan of Wuxia novels. \xa0It quickly rose to prominence as the largest Chinese-to-English novel translation platform in the world.',
+ 'id': u'106',
+ 'modified_time': u'2017-02-27T03:04:00+00:00',
+ 'name': u'About Wuxiaworld(\u2122)',
+ 'published_time': u'2014-12-20T01:08:20+00:00'}
+{'description': u'ABOUT WUXIAWORLD(\u2122) Wuxiaworld.com, owned by Wuxiaworld Limited, was founded in December of 2014 by RWX, a\xa0passionate fan of Wuxia novels. \xa0It quickly rose to prominence as the largest Chinese-to-English novel translation platform in the world.',
+ 'id': u'106',
+ 'modified_time': u'2017-02-27T03:04:00+00:00',
+ 'name': u'About Wuxiaworld(\u2122)',
+ 'published_time': u'2014-12-20T01:08:20+00:00'}
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/ssn-index/>
+{'description': u'Genres: Action, Comedy, Fantasy, Mature, Romance, Korean Author: \uc9c4\uc124\uc6b0 Status:\xa0203 Chapters (Complete)\xa0Raw Synopsis: \u201cWhat is this?\u201d A necromancer had returned to earth after 20 years, and the subway station\u2026 No, it had become a dungeon.',
+ 'id': u'115914',
+ 'modified_time': u'2017-03-28T22:36:47+00:00',
+ 'name': u'Seoul Station\u2019s Necromancer',
+ 'published_time': u'2016-03-18T08:12:43+00:00'}
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/wdqk-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/master-index/7-killers-chapter-1/> (referer: http://www.wuxiaworld.com/7-killers/)
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/tdg-index/tdg-chapter-1/> from <GET http://www.wuxiaworld.com/tdg-index/tdg-chapter-1>
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/sr-index/sr-chapter-1/> from <GET http://www.wuxiaworld.com/sr-index/sr-chapter-1>
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/spiritvessel-index/spirit-vessel-chapter-1/> from <GET http://www.wuxiaworld.com/spiritvessel-index/spirit-vessel-chapter-1>
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/breakers-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/godofcrime-index/>
+{'description': u'Genres: Action, Fantasy, Korean Title: God of Crime (\ubc94\uc8c4\uc758 \uc2e0) Author: Han Yeoul (\ud55c\uc5ec\uc6b8) Status: 165 chapters (Complete) Raws: Munpia Translator: Rainbow Turtle Editor: Superposhposh and LD Synopsis: Seo Tae-hyuk, jailed after getting a false charge unfairly.',
+ 'id': u'115908',
+ 'modified_time': u'2017-04-02T21:52:55+00:00',
+ 'name': u'God of Crime',
+ 'published_time': u'2016-03-18T08:09:21+00:00'}
+2017-04-03 19:39:22 [root] ERROR: This is not a book, missing index in {'description': u'Glossary of Terms in Wuxia, Xianxia & Xuanhuan\xa0Novels A glossary of terms which commonly appear in Wuxia, Xianxia & Xuanhuan novels. Table of Contents: Novel Categories Cosmology Beings & Creatures World of Martial Arts Martial Arts Cultivation Alchemy Items & Weapons Miscellaneous...',
+ 'id': u'88154',
+ 'modified_time': u'2016-11-21T08:24:02+00:00',
+ 'name': u'General Glossary of Terms',
+ 'published_time': u'2016-11-21T08:24:02+00:00'}
+2017-04-03 19:39:22 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'description': u'Glossary of Terms in Wuxia, Xianxia & Xuanhuan\xa0Novels A glossary of terms which commonly appear in Wuxia, Xianxia & Xuanhuan novels. Table of Contents: Novel Categories Cosmology Beings & Creatures World of Martial Arts Martial Arts Cultivation Alchemy Items & Weapons Miscellaneous...',
+ 'id': u'88154',
+ 'modified_time': u'2016-11-21T08:24:02+00:00',
+ 'name': u'General Glossary of Terms',
+ 'published_time': u'2016-11-21T08:24:02+00:00'}
+{'description': u'Glossary of Terms in Wuxia, Xianxia & Xuanhuan\xa0Novels A glossary of terms which commonly appear in Wuxia, Xianxia & Xuanhuan novels. Table of Contents: Novel Categories Cosmology Beings & Creatures World of Martial Arts Martial Arts Cultivation Alchemy Items & Weapons Miscellaneous...',
+ 'id': u'88154',
+ 'modified_time': u'2016-11-21T08:24:02+00:00',
+ 'name': u'General Glossary of Terms',
+ 'published_time': u'2016-11-21T08:24:02+00:00'}
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/emperorofsoloplay-index/>
+{'description': u'Genres: Fantasy, Virtual Reality, Korean Translated by Otter and Fudge! Synopsis: 2035. The virtual reality game, Warlord, changed the world. An Jaehyun was one of the many who wished to change his life through the game. After dedicating his life to the game, he was met with a betrayal.',
+ 'id': u'115904',
+ 'modified_time': u'2017-03-29T19:48:21+00:00',
+ 'name': u'Emperor of Solo Play',
+ 'published_time': u'2016-03-18T08:01:43+00:00'}
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/atd-index/>
+{'description': u'Genres: Action, Adventure, Fantasy, School Life, Korean Title: Acquiring Talent in a Dungeon (\ub358\uc804\uc5d0\uc11c \uc7ac\ub2a5\uc5bb\uae30) Author: Mibantan (\ubbf8\ubc18\ud0c4) Status: 67 chapters (Ongoing) Raws: Munpia Translator: Rainbow Turtle Editor: Jay Synopsis: Talent, appearance, power.',
+ 'id': u'115900',
+ 'modified_time': u'2017-04-02T21:30:15+00:00',
+ 'name': u'Acquiring Talent in a Dungeon',
+ 'published_time': u'2016-03-18T07:55:43+00:00'}
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/ldk-index/ldk-chapter-1/> from <GET http://www.wuxiaworld.com/ldk-index/ldk-chapter-1>
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/renegade-index/renegade-chapter-1/> from <GET http://www.wuxiaworld.com/renegade-index/renegade-chapter-1>
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/martialworld-index/mw-chapter-0/> from <GET http://www.wuxiaworld.com/martialworld-index/mw-chapter-0>
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/wdqk-index/>
+{'description': u'Our Synopsis The Great Yan Empire exists in a world where respect can only be earned through strength. Within this Great Yan Empire, the four great clans have always stood above the rest.',
+ 'id': u'33335',
+ 'modified_time': u'2017-02-03T03:15:40+00:00',
+ 'name': u'Wu Dong Qian Kun',
+ 'published_time': u'2015-11-21T12:03:24+00:00'}
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/master-index/7-killers-chapter-1/>
+{'id': u'4892',
+ 'name': u'7 Killers \u2013 Chapter 1',
+ 'parent_book_id': u'11480',
+ 'parent_book_name': u'7 Killers'}
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/dragonmakenwar-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/breakers-index/>
+{'description': u'Genres: Action, Adventure, Fantasy, Korean Title: Breakers (\ube0c\ub808\uc774\ucee4\uc988) Author: Chwiryong (\ucde8\ub8e1) Status: 108 chapters (Ongoing) Raws: Munpia Translator: Rainbow Turtle Editor: LD Temporary Synopsis: My name is Joo In-gong. The name that my parents gave me meant \u2018protagonist\u2019 of the world.',
+ 'id': u'115898',
+ 'modified_time': u'2017-04-03T19:39:07+00:00',
+ 'name': u'Breakers',
+ 'published_time': u'2016-03-18T07:53:41+00:00'}
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/spiritvessel-index/spirit-vessel-chapter-1/> (referer: http://www.wuxiaworld.com/spiritvessel-index/)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/tgs-index/tgs-chapter-1/> (referer: http://www.wuxiaworld.com/tgs-index/)
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/ti-index/ti-vol-1-chapter-1-1/> from <GET http://www.wuxiaworld.com/ti-index/ti-vol-1-chapter-1>
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/ssn-index/ssn-chapter-0/> from <GET http://www.wuxiaworld.com/ssn-index/ssn-chapter-0>
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/sfl-index/skyfire-avenue-chapter-401/> (referer: http://www.wuxiaworld.com/sfl-index/)
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/%e2%98%af-issth-chapter-502-%e2%98%af/> from <GET http://www.wuxiaworld.com/%e2%98%af-issth-chapter-502>
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/godofcrime-index/goc-chapter-1/> from <GET http://www.wuxiaworld.com/godofcrime-index/goc-chapter-1>
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/mga-index/mga-chapter-1/> from <GET http://www.wuxiaworld.com/mga-index/mga-chapter-1>
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/emperorofsoloplay-index/esp-chapter-0/> from <GET http://www.wuxiaworld.com/emperorofsoloplay-index/esp-chapter-0>
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/sr-index/sr-chapter-1/> (referer: http://www.wuxiaworld.com/sr-index/)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/ldk-index/ldk-chapter-1/> (referer: http://www.wuxiaworld.com/ldk-index/)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/tdg-index/tdg-chapter-1/> (referer: http://www.wuxiaworld.com/tdg-index/)
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/dragonmakenwar-index/>
+{'description': u'Genres: Action, Adventure, Drama, Fantasy, Korean Author: Kim Jae-Han Status:\xa010 Volumes/266 Chapters (Completed) Synopsis:\xa0220 years ago, in the legendary Dragon Demon War, Hero Azell ended the war by killing the evil Dragon Demon race\u2019s King Atein.',
+ 'id': u'115902',
+ 'modified_time': u'2017-03-26T15:25:16+00:00',
+ 'name': u'Dragon Maken War',
+ 'published_time': u'2016-03-18T08:00:10+00:00'}
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/breakers-index/breakers-chapter-1/> from <GET http://www.wuxiaworld.com/breakers-index/breakers-chapter-1>
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/martialworld-index/mw-chapter-0/> (referer: http://www.wuxiaworld.com/martialworld-index/)
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/wdqk-index/wdqk-chapter-1/> from <GET http://www.wuxiaworld.com/wdqk-index/wdqk-chapter-1>
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/mga-index/mga-chapter-1200/> from <GET http://www.wuxiaworld.com/mga-chapter-1200>
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/ti-index/ti-vol-1-chapter-1-1/> (referer: http://www.wuxiaworld.com/ti-index/)
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/atd-index/atd-chapter-1/> from <GET http://www.wuxiaworld.com/atd-index/atd-chapter-1>
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/ssn-index/ssn-chapter-0/> (referer: http://www.wuxiaworld.com/ssn-index/)
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/spiritvessel-index/spirit-vessel-chapter-1/>
+{'id': u'114684',
+ 'name': u'Spirit Vessel Chapter 1',
+ 'parent_book_id': u'114897',
+ 'parent_book_name': u'Spirit Vessel'}
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/renegade-index/renegade-chapter-1/> (referer: http://www.wuxiaworld.com/renegade-index/)
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/tgs-index/tgs-chapter-1/>
+{'id': u'117387',
+ 'name': u'TGS Volume 1, Chapter 1',
+ 'parent_book_id': u'117543',
+ 'parent_book_name': u'The Grandmaster Strategist'}
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/usaw-book-2-chapter-179/> from <GET http://www.wuxiaworld.com/usaw-book-2-chapter-179>
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/issth-index/issth-book-1-chapter-1/> from <GET http://www.wuxiaworld.com/issth-index/issth-book-1-chapter-1>
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/sfl-index/skyfire-avenue-chapter-401/>
+{'id': u'99025',
+ 'name': u'Skyfire Avenue, Chapter 401',
+ 'parent_book_id': u'6614',
+ 'parent_book_name': u'Skyfire Avenue'}
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/emperorofsoloplay-index/esp-chapter-0/> (referer: http://www.wuxiaworld.com/emperorofsoloplay-index/)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/%e2%98%af-issth-chapter-502-%e2%98%af/> (referer: http://www.wuxiaworld.com/what-dao-heck-a-very-basic-primer-to-the-dao/)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/mga-index/mga-chapter-1/> (referer: http://www.wuxiaworld.com/mga-index/)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/godofcrime-index/goc-chapter-1/> (referer: http://www.wuxiaworld.com/godofcrime-index/)
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/sr-index/sr-chapter-1/>
+{'id': u'71138',
+ 'name': u'SR \u2013 Chapter 1',
+ 'parent_book_id': u'70977',
+ 'parent_book_name': u'Spirit Realm'}
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/wdqk-index/wdqk-chapter-1/> (referer: http://www.wuxiaworld.com/wdqk-index/)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/breakers-index/breakers-chapter-1/> (referer: http://www.wuxiaworld.com/breakers-index/)
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/dragonmakenwar-index/dmw-chapter-0/> from <GET http://www.wuxiaworld.com/dragonmakenwar-index/dmw-chapter-0>
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/sotr-index/sotr-chapter-1/> from <GET http://www.wuxiaworld.com/sotr-index/sotr-chapter-1>
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/ldk-index/ldk-chapter-1/>
+{'id': u'88669',
+ 'name': u'LDK Chapter 1',
+ 'parent_book_id': u'88655',
+ 'parent_book_name': u'Legend of the Dragon King'}
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/tdg-index/tdg-chapter-1/>
+{'id': u'29210',
+ 'name': u'TDG Chapter 1',
+ 'parent_book_id': u'29205',
+ 'parent_book_name': u'Tales of DemonsGods'}
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/pw-index/pw-chapter-1/> from <GET http://www.wuxiaworld.com/pw-index/pw-chapter-1>
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/%e2%99%9f-wmw-chapter-515-%e2%99%9f/> from <GET http://www.wuxiaworld.com/%e2%99%9f-wmw-chapter-515>
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/rebirth-index/rebirth-chapter-1/> from <GET http://www.wuxiaworld.com/rebirth-index/rebirth-chapter-1>
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/atd-index/atd-chapter-1/> (referer: http://www.wuxiaworld.com/atd-index/)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/mga-index/mga-chapter-1200/> (referer: http://www.wuxiaworld.com/author-spotlight-i-eat-tomatoes/)
+2017-04-03 19:39:22 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/tgr-index/tgr-chapter-1/> from <GET http://www.wuxiaworld.com/tgr-index/tgr-chapter-1>
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/martialworld-index/mw-chapter-0/>
+{'id': u'109625',
+ 'name': u'MW: Chapter 0 \u2013 Magic Cube',
+ 'parent_book_id': u'109604',
+ 'parent_book_name': u'Martial World'}
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/ti-index/ti-vol-1-chapter-1-1/>
+{'id': u'58905',
+ 'name': u'TI Vol 1: Chapter 1-1',
+ 'parent_book_id': u'58903',
+ 'parent_book_name': u'Terror Infinity'}
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/ssn-index/ssn-chapter-0/>
+{'id': u'116266',
+ 'name': u'SSN: Chapter 0 \u2013 Prologue',
+ 'parent_book_id': u'115914',
+ 'parent_book_name': u'Seoul Station\u2019s Necromancer'}
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/issth-index/issth-book-1-chapter-1/> (referer: http://www.wuxiaworld.com/issth-index/)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/usaw-book-2-chapter-179/> (referer: http://www.wuxiaworld.com/category/translator-thoughts/)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/iras-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/renegade-index/renegade-chapter-1/>
+{'id': u'42351',
+ 'name': u'Renegade Chapter 1',
+ 'parent_book_id': u'42349',
+ 'parent_book_name': u'Renegade Immortal'}
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/emperorofsoloplay-index/esp-chapter-0/>
+{'id': u'116169',
+ 'name': u'ESP: Chapter 0 \u2013 Prologue',
+ 'parent_book_id': u'115904',
+ 'parent_book_name': u'Emperor of Solo Play'}
+2017-04-03 19:39:22 [root] ERROR: This is not a book, missing index in {'id': u'49100',
+ 'name': u'\u262f ISSTH Chapter 502 \u262f',
+ 'parent_book_id': u'49144',
+ 'parent_book_name': u'What Dao Heck?  A Very Basic Primer to the Dao'}
+2017-04-03 19:39:22 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'id': u'49100',
+ 'name': u'\u262f ISSTH Chapter 502 \u262f',
+ 'parent_book_id': u'49144',
+ 'parent_book_name': u'What Dao Heck?  A Very Basic Primer to the Dao'}
+{'id': u'49100',
+ 'name': u'\u262f ISSTH Chapter 502 \u262f',
+ 'parent_book_id': u'49144',
+ 'parent_book_name': u'What Dao Heck?  A Very Basic Primer to the Dao'}
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/wmw-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/usaw-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/uts-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/hjc-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/truemartialworld-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/mga-index/mga-chapter-1/>
+{'id': u'11823',
+ 'name': u'MGA \u2013 Chapter 1',
+ 'parent_book_id': u'11821',
+ 'parent_book_name': u'Martial God Asura'}
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/godofcrime-index/goc-chapter-1/>
+{'id': u'116056',
+ 'name': u'GOC: Chapter 1 \u2013 I Don\u2019t Think it is a Dream',
+ 'parent_book_id': u'115908',
+ 'parent_book_name': u'God of Crime'}
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/wdqk-index/wdqk-chapter-1/>
+{'id': u'33341',
+ 'name': u'WDQK Chapter 1',
+ 'parent_book_id': u'33335',
+ 'parent_book_name': u'Wu Dong Qian Kun'}
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/breakers-index/breakers-chapter-1/>
+{'id': u'115942',
+ 'name': u'Breakers: Chapter 1 \u2013 Prologue',
+ 'parent_book_id': u'115898',
+ 'parent_book_name': u'Breakers'}
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/dragonmakenwar-index/dmw-chapter-0/> (referer: http://www.wuxiaworld.com/dragonmakenwar-index/)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/rebirth-index/rebirth-chapter-1/> (referer: http://www.wuxiaworld.com/rebirth-index/)
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/atd-index/atd-chapter-1/>
+{'id': u'115928',
+ 'name': u'ATD: Chapter 1 \u2013 Day 1, Entering the Dungeon',
+ 'parent_book_id': u'115900',
+ 'parent_book_name': u'Acquiring Talent in a Dungeon'}
+2017-04-03 19:39:22 [root] ERROR: This is not a book, missing index in {'id': u'94711',
+ 'name': u'MGA \u2013 Chapter 1200',
+ 'parent_book_id': u'94855',
+ 'parent_book_name': u'Author Spotlight: I Eat Tomatoes'}
+2017-04-03 19:39:22 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'id': u'94711',
+ 'name': u'MGA \u2013 Chapter 1200',
+ 'parent_book_id': u'94855',
+ 'parent_book_name': u'Author Spotlight: I Eat Tomatoes'}
+{'id': u'94711',
+ 'name': u'MGA \u2013 Chapter 1200',
+ 'parent_book_id': u'94855',
+ 'parent_book_name': u'Author Spotlight: I Eat Tomatoes'}
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/%e2%99%9f-wmw-chapter-515-%e2%99%9f/> (referer: http://www.wuxiaworld.com/wuxiaxianxia-terms-of-address/)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/sotr-index/sotr-chapter-1/> (referer: http://www.wuxiaworld.com/sotr-index/)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/gor-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/emperor-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/tgr-index/tgr-chapter-1/> (referer: http://www.wuxiaworld.com/tgr-index/)
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/issth-index/issth-book-1-chapter-1/>
+{'id': u'11253',
+ 'name': u'ISSTH \u2013 Book 1 \u2013 Chapter 1',
+ 'parent_book_id': u'11242',
+ 'parent_book_name': u'I Shall Seal the Heavens'}
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/pw-index/pw-chapter-1/> (referer: http://www.wuxiaworld.com/pw-index/)
+2017-04-03 19:39:22 [root] ERROR: This is not a book, missing index in {'id': u'123238',
+ 'name': u'USAW Book 2 Chapter 179',
+ 'parent_book_name': u'Translator Thoughts'}
+2017-04-03 19:39:22 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'id': u'123238',
+ 'name': u'USAW Book 2 Chapter 179',
+ 'parent_book_name': u'Translator Thoughts'}
+{'id': u'123238',
+ 'name': u'USAW Book 2 Chapter 179',
+ 'parent_book_name': u'Translator Thoughts'}
+2017-04-03 19:39:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/iras-index/>
+{'description': u'Genres: Comedy, Drama, Fantasy, Martial Arts, Mature, Romance, Slice Of Life, Supernatural, Chinese Original Synopsis: Zhang Ye was originally a mundane college graduate, cursed with below average looks and height but with aspiring dreams of becoming famous.',
+ 'id': u'110500',
+ 'modified_time': u'2017-03-23T01:05:20+00:00',
+ 'name': u'I\u2019m Really a Superstar',
+ 'published_time': u'2016-12-31T18:42:29+00:00'}
+2017-04-03 19:39:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/tcosp-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/wmw-index/>
+{'description': u"Header Art: Quihnn Warlock of the Magus World (\u5deb\u754c\u672f\u58eb) SYNOPSIS What happens when a scientist from a futuristic world reincarnates in a World of Magic and Knights? An awesome MC \u2014 that's what happens! A scientist\u2019s goal is to explore the secrets of the universe, and this is exactly what Le...",
+ 'id': u'63063',
+ 'modified_time': u'2017-03-27T22:59:53+00:00',
+ 'name': u'Warlock of the Magus World',
+ 'published_time': u'2016-03-21T22:58:08+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/usaw-index/>
+{'description': u'(pardon my poor MS Paint skills) http://book.zongheng.com/showchapter/94054.html Upgrade Specialist in Another World (\u5f02\u754c\u4e4b\u88c5\u5907\u5f3a\u5316\u4e13\u5bb6) is a popular Chinese fantasy web novel by writer Endless Sea of Clouds (\u832b\u832b\u4e91\u6d77). Completed in 2013, it has 1356 chapters and just over 3.',
+ 'id': u'41030',
+ 'modified_time': u'2017-03-25T03:13:03+00:00',
+ 'name': u'Upgrade Specialist in Another World',
+ 'published_time': u'2016-01-07T21:25:57+00:00'}
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/btth-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/desolate-era-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/awe-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/ancientgodlymonarch-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/atg-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/absolute-choice-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/uts-index/>
+{'description': u'The Unrivaled Tang Sect(\u7edd\u4e16\u5510\u95e8) by Tang Jia San Shao Synopsis: The legend of the continent, the battle that brought fame; the Sacred Phoenix Lady, the Windfire Meteor Godrealm saber-art; the pair that ascend and fuse, the golden sun and the blue moon, the fury of the crashing thunder.',
+ 'id': u'95056',
+ 'modified_time': u'2017-03-31T09:26:51+00:00',
+ 'name': u'The Unrivaled Tang Sect',
+ 'published_time': u'2017-01-14T14:58:15+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/hjc-index/>
+{'description': u'\u5929\u73e0\u53d8 ( Heavenly Jewel Change / Tian Zhu Bian ) is considered the \u7384\u5e7b genre, set in a fantasy world of TJSS\u2019 creation. It is a relatively shorter story compared to his epic tales like Douluo Dalu, and is also one of my favourites.',
+ 'id': u'30488',
+ 'modified_time': u'2017-02-28T03:48:12+00:00',
+ 'name': u'Heavenly Jewel Change',
+ 'published_time': u'2015-11-06T22:58:17+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/truemartialworld-index/>
+{'description': u'Genres: Action, Adventure, Comedy, Fantasy, Martial Arts, Mature, Supernatural, Tragedy, Chinese Author:\xa0Canjian Li De Niu/Cocooned Cow (\u8695\u8327\u91cc\u7684\u725b) Status:\xa0915 Chapters (Ongoing) Raw Translator: CKtalon Synopsis: With the strongest experts from the 33 Skies, the Human Emperor, Lin Ming and h...',
+ 'id': u'110505',
+ 'modified_time': u'2017-03-31T22:26:59+00:00',
+ 'name': u'True Martial World',
+ 'published_time': u'2016-12-31T18:46:43+00:00'}
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/ast-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/rmji-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/dragonmakenwar-index/dmw-chapter-0/>
+{'id': u'116103',
+ 'name': u'DMW: Chapter 0 \u2013 Prologue',
+ 'parent_book_id': u'115902',
+ 'parent_book_name': u'Dragon Maken War'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/rebirth-index/rebirth-chapter-1/>
+{'id': u'76208',
+ 'name': u'Rebirth Chapter 1',
+ 'parent_book_id': u'76206',
+ 'parent_book_name': u'Rebirth of the Thief Who Roamed the World'}
+2017-04-03 19:39:23 [root] ERROR: This is not a book, missing index in {'id': u'122668',
+ 'name': u'\u265f WMW Chapter 515 \u265f',
+ 'parent_book_id': u'88152',
+ 'parent_book_name': u'Wuxia-Xianxia Terms of Address'}
+2017-04-03 19:39:23 [scrapy.core.scraper] WARNING: Dropped: This is not a book, missing index in {'id': u'122668',
+ 'name': u'\u265f WMW Chapter 515 \u265f',
+ 'parent_book_id': u'88152',
+ 'parent_book_name': u'Wuxia-Xianxia Terms of Address'}
+{'id': u'122668',
+ 'name': u'\u265f WMW Chapter 515 \u265f',
+ 'parent_book_id': u'88152',
+ 'parent_book_name': u'Wuxia-Xianxia Terms of Address'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/sotr-index/sotr-chapter-1/>
+{'id': u'48518',
+ 'name': u'SOTR Chapter 1',
+ 'parent_book_id': u'48514',
+ 'parent_book_name': u'Sovereign of the Three Realms'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/gor-index/>
+{'description': u'Gate of Apocalypse Novel: Gate of Revelation\xa0(\u5929\u542f\u4e4b\u95e8) Author: Dancing (\u8df3\u821e) Novel Status: Ongoing Raw:\xa0Qidian Genre: Modern Fantasy \xa0 Intro (podao) After an unexpected incident, Chen Xiaolian, an ordinary high school student, came to discover that the world he lived in is nothing mor...',
+ 'id': u'57417',
+ 'modified_time': u'2017-03-31T12:49:05+00:00',
+ 'name': u'Gate of Revelation',
+ 'published_time': u'2016-05-03T11:17:09+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/emperor-index/>
+{'description': u'Author Yanbi Xiaosheng (\u538c\u7b14\u8427\u751f) Translator Bao Link to Raws Qidian Synopsis Ten million years ago, Li Qiye planted a simple water bamboo into the ground. Eight million\xa0years ago, Li Qiye had a koi fish pet. Five million\xa0years ago, Li Qiye cared for a little girl. . . .',
+ 'id': u'81606',
+ 'modified_time': u'2017-04-02T19:11:10+00:00',
+ 'name': u'Emperor\u2019s Domination',
+ 'published_time': u'2016-10-13T12:51:57+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/tgr-index/tgr-chapter-1/>
+{'id': u'24411',
+ 'name': u'TGR Chapter 1',
+ 'parent_book_id': u'24409',
+ 'parent_book_name': u'The Great Ruler'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/pw-index/pw-chapter-1/>
+{'id': u'37659',
+ 'name': u'PW Chapter 1',
+ 'parent_book_id': u'37653',
+ 'parent_book_name': u'Perfect World'}
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/st-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/hsnt-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/dkwss/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/cdindex-html/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/col-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/tcosp-index/>
+{'description': u"Author's Synopsis: Cloud birds that soar through the blue sky; Terrorblood wolves that roam the wastelands ruthlessly. Dream beasts that dart through the moonlight forests; Ghost kings that dwell on foggy cliffs.",
+ 'id': u'122871',
+ 'modified_time': u'2017-04-03T14:41:11+00:00',
+ 'name': u'The Charm of Soul Pets',
+ 'published_time': u'2017-04-03T06:55:45+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/btth-index/>
+{'description': u'Battle Through the Heavens In a land where no magic is present. A land where the strong make the rules and weak have to obey. A land filled with alluring treasures and beauty, yet also filled with unforeseen danger.',
+ 'id': u'8267',
+ 'modified_time': u'2017-02-11T02:15:05+00:00',
+ 'name': u'Battle Through the Heavens',
+ 'published_time': u'2015-04-06T22:44:41+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/desolate-era-index/>
+{'description': u"Fate had never been kind to Ji Ning. Wracked by illnesses and infirm his entire life on Earth, Ning knew early on that he would die as a teenager. What he didn't know was that there really was such a thing as life after death, and that the universe was a far larger place than he thought.",
+ 'id': u'23248',
+ 'modified_time': u'2017-03-30T15:48:56+00:00',
+ 'name': u'Desolate Era',
+ 'published_time': u'2015-09-09T08:55:10+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/awe-index/>
+{'description': u'With a thought, the land\xa0becomes a vast sea. \xa0With another thought, it transforms\xa0a field of mulberries. With a\xa0thought, a thousand fiends are killed. \xa0With another thought, ten thousand Immortals are slain. Only\xa0I alone... shall be everlasting.',
+ 'id': u'90949',
+ 'modified_time': u'2017-04-02T01:34:14+00:00',
+ 'name': u'A Will Eternal',
+ 'published_time': u'2016-12-10T04:47:24+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/ancientgodlymonarch-index/>
+{'description': u'Genres: Action, Adventure, Drama, Fantasy, Martial Arts, Mature, Psychological, Romance, Chinese Author: Jing Wu Hen (\u51c0\u65e0\u75d5) Status: 940+ Chapters (Ongoing) Translator:\xa0kurodreamer Synopsis: Within the Province of the Nine Skies, far above the heavens, there exists nine galaxies of astral river...',
+ 'id': u'114903',
+ 'modified_time': u'2017-03-19T16:08:11+00:00',
+ 'name': u'Ancient Godly Monarch',
+ 'published_time': u'2016-03-16T07:07:24+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/atg-index/>
+{'description': u'Ni Tian Xie Shen (\u9006\u5929\u90aa\u795e) - Against the Gods \u273f a Chinese web novel by Mars Gravity (\u706b\u661f\u5f15\u529b) Current Status: Ongoing Genre Tags: fantasy, different world, level up, refreshing Translator Tags: mature, harem Translated by Alyschu&Co ATG Team: alyschu, OverTheRanbow, Scrya, SummerRain...',
+ 'id': u'13933',
+ 'modified_time': u'2017-04-03T16:26:21+00:00',
+ 'name': u'Against the Gods',
+ 'published_time': u'2015-06-13T01:01:50+00:00'}
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/iras-index/iras-chapter-0/> from <GET http://www.wuxiaworld.com/iras-index/iras-chapter-0>
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/usaw-index/usaw-book-1-chapter-1/> from <GET http://www.wuxiaworld.com/usaw-index/usaw-book-1-chapter-1>
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/absolute-choice-index/>
+{'description': u"\u7edd\u5bf9\u9009\u9879, aka Ju\xe9 Du\xec Xu\u01cen Xi\xe0ng, aka Absolute Choice, is a webnovel by a rookie Chinese Xuanhuan (fantasy) writer Pear Lands In The Autumn Spring (\u68a8\u843d\u79cb\u6eaa) with great, fresh ideas. It will be translated by CKtalon, who also translates True Martial World and I'm Really a Superstar.",
+ 'id': u'91838',
+ 'modified_time': u'2017-03-28T22:45:34+00:00',
+ 'name': u'Absolute Choice',
+ 'published_time': u'2016-12-15T22:58:27+00:00'}
+2017-04-03 19:39:23 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'hellotranslations.wordpress.com': <GET https://hellotranslations.wordpress.com/2015/01/30/dou-po-cang-qiong-chapter-1>
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/ast-index/>
+{'description': u'Genres: Action, Adventure, Harem, Martial Arts, Romance, Tragedy, Chinese Author: I Am Superfluous (\u6211\u662f\u591a\u4f59\u4eba) Status: 2492 Chapters (Completed) Translator:\xa0lordbluefire Synopsis: A human warrior cultivating the Ancient Strengthening Technique has transcended dimensions and arrived on Kyushu.',
+ 'id': u'114905',
+ 'modified_time': u'2017-03-19T16:03:38+00:00',
+ 'name': u'Ancient Strengthening Technique',
+ 'published_time': u'2016-03-16T07:11:14+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/rmji-index/>
+{'description': u'Genres: Action, Adventure, Fantasy, Martial Arts, Romance, Xianxia, Chinese Author: Wang Yu (\u5fd8\u8bed) Status: 2446 Chapters (Complete) Translator: Doubledd Synopsis: A poor and ordinary boy from a village joins a minor sect in Jiang Hu and becomes an Unofficial Disciple by chance.',
+ 'id': u'114900',
+ 'modified_time': u'2017-03-27T15:57:43+00:00',
+ 'name': u'A Record of a Mortal\u2019s Journey to Immortality',
+ 'published_time': u'2016-03-16T07:06:24+00:00'}
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/wmw-index/wmw-chapter-1/> from <GET http://www.wuxiaworld.com/wmw-index/wmw-chapter-1>
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/tymyd-index/> (referer: http://www.wuxiaworld.com)
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/uts-index/uts-book-1-chapter-1-1/> from <GET http://www.wuxiaworld.com/uts-index/uts-book-1-chapter-1>
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/gor-index/gor-chapter-1/> from <GET http://www.wuxiaworld.com/gor-index/gor-chapter-1>
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/truemartialworld-index/tmw-chapter-1/> from <GET http://www.wuxiaworld.com/truemartialworld-index/tmw-chapter-1>
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/hjc-index/hjc-chapter-1-1/> from <GET http://www.wuxiaworld.com/hjc-index/hjc-chapter-1>
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/st-index/>
+{'description': u'\u661f\u8fb0\u53d8, aka Stellar Transformation, is a webnovel by popular Chinese Xianxia (fantasy/kung fu) writer I Eat Tomatoes \uff08\u6211\u5403\u897f\u7ea2\u67ff\uff09. Books 1-10 were originally translated by he-man. The works can be found below, or at SPCNET, or in epub form floating around the net.',
+ 'id': u'4993',
+ 'modified_time': u'2016-07-03T22:50:31+00:00',
+ 'name': u'Stellar Transformations',
+ 'published_time': u'2015-02-28T00:46:34+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/hsnt-index/>
+{'description': u'Heroes Shed No Tears Heroes Shed No Tears\xa0is a novel originally written by famous Chinese Wuxia author Gulong. Translated by deathblade. Prologue Chapter 1 - A Solitary Box Chapter 2 - An Important Head Chapter 3 - Surprise Attack Chapter 4 - An Extraordinary Person, an Extraordinary Place, Extraor...',
+ 'id': u'11484',
+ 'modified_time': u'2015-05-21T21:24:55+00:00',
+ 'name': u'Heroes Shed No Tears',
+ 'published_time': u'2015-05-21T21:24:55+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/dkwss/>
+{'description': u'Dragon King With Seven Stars Upon the death of multi-millionaire playboy Sun Jicheng, Jinan city suddenly becomes the center of a maelstrom of Jianghu intrigue.',
+ 'id': u'11475',
+ 'modified_time': u'2017-01-03T08:33:54+00:00',
+ 'name': u'Dragon King With Seven Stars',
+ 'published_time': u'2015-05-21T21:21:43+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/cdindex-html/>
+{'description': u'\u76d8\u9f99, aka Panlong, aka Coiling Dragon, is a webnovel by popular Chinese Xianxia (fantasy/kung fu) writer I Eat Tomatoes \uff08\u6211\u5403\u897f\u7ea2\u67ff\uff09. This novel has been fully translated by RWX.',
+ 'id': u'2',
+ 'modified_time': u'2016-03-05T23:39:16+00:00',
+ 'name': u'Coiling Dragon',
+ 'published_time': u'2014-12-20T02:06:10+00:00'}
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/col-index/>
+{'description': u'Child of Light\xa0(\u5149\u4e4b\u5b50 Guang Zhi Zi)\xa0by Tang Jia San Shao A Chinese fantasy webnovel under the sub-genre of Magical Campus by the author of Doulou Dalu, Kuang Shen and \xa0Shen Yin Wang\xa0Zuo. This is not a Xianxia.',
+ 'id': u'30692',
+ 'modified_time': u'2016-11-19T05:24:21+00:00',
+ 'name': u'Child of Light',
+ 'published_time': u'2015-11-07T01:05:16+00:00'}
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/ancientgodlymonarch-index/agm-chapter-1/> from <GET http://www.wuxiaworld.com/ancientgodlymonarch-index/agm-chapter-1>
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/emperor-index/emperor-chapter-1/> from <GET http://www.wuxiaworld.com/emperor-index/emperor-chapter-1>
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/tcosp-index/tcosp-chapter-1/> from <GET http://www.wuxiaworld.com/tcosp-index/tcosp-chapter-1>
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/usaw-index/usaw-book-1-chapter-1/> (referer: http://www.wuxiaworld.com/usaw-index/)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/iras-index/iras-chapter-0/> (referer: http://www.wuxiaworld.com/iras-index/)
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/awe-index/awe-chapter-1/> from <GET http://www.wuxiaworld.com/awe-index/awe-chapter-1>
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/rmji-index/rmji-chapter-1/> from <GET http://www.wuxiaworld.com/rmji-index/rmji-chapter-1>
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/tymyd-index/>
+{'description': u'\u5929\u6daf\u660e\u6708\u5200, aka Tianya Mingyue Dao, aka Horizon, Bright Moon, Sabre. Acclaimed by many to be one of the finest, most emotionally moving works by\xa0acclaimed Wuxia novelist Gulong. \xa0This translation was originally made by translators: metwin1 (00-03), Chowbeng (04-07), and RWX (8-24).',
+ 'id': u'2166',
+ 'modified_time': u'2015-05-21T21:44:42+00:00',
+ 'name': u'Horizon, Bright Moon, Sabre',
+ 'published_time': u'2015-01-22T15:31:35+00:00'}
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/desolate-era-index/de-book-1-chapter-1/> from <GET http://www.wuxiaworld.com/desolate-era-index/de-book-1-chapter-1>
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/ast-index/ast-chapter-1/> from <GET http://www.wuxiaworld.com/ast-index/ast-chapter-1>
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/atg-index/atg-chapter-300/> from <GET http://www.wuxiaworld.com/atg-chapter-300>
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/master-index/dkwss-chapter-1/> from <GET http://www.wuxiaworld.com/master-index/dkwss-chapter-1>
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/hjc-index/hjc-chapter-1-1/> (referer: http://www.wuxiaworld.com/hjc-index/)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/emperor-index/emperor-chapter-1/> (referer: http://www.wuxiaworld.com/emperor-index/)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/gor-index/gor-chapter-1/> (referer: http://www.wuxiaworld.com/gor-index/)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/wmw-index/wmw-chapter-1/> (referer: http://www.wuxiaworld.com/wmw-index/)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/truemartialworld-index/tmw-chapter-1/> (referer: http://www.wuxiaworld.com/truemartialworld-index/)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/ancientgodlymonarch-index/agm-chapter-1/> (referer: http://www.wuxiaworld.com/ancientgodlymonarch-index/)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/rmji-index/rmji-chapter-1/> (referer: http://www.wuxiaworld.com/rmji-index/)
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/usaw-index/usaw-book-1-chapter-1/>
+{'id': u'41504',
+ 'name': u'USAW Book 1 Chapter 1',
+ 'parent_book_id': u'41030',
+ 'parent_book_name': u'Upgrade Specialist in Another World'}
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/awe-index/awe-chapter-1/> (referer: http://www.wuxiaworld.com/awe-index/)
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/tymyd-index/chapter-1/> from <GET http://www.wuxiaworld.com/tymyd-index/chapter-1>
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/col-index/col-volume-1-chapter-1/> from <GET http://www.wuxiaworld.com/col-index/col-volume-1-chapter-1>
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/tcosp-index/tcosp-chapter-1/> (referer: http://www.wuxiaworld.com/tcosp-index/)
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/iras-index/iras-chapter-0/>
+{'id': u'111233',
+ 'name': u'IRAS: Chapter 0 \u2013 I Want to Be a Star!',
+ 'parent_book_id': u'110500',
+ 'parent_book_name': u'I\u2019m Really a Superstar'}
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/ast-index/ast-chapter-1/> (referer: http://www.wuxiaworld.com/ast-index/)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/desolate-era-index/de-book-1-chapter-1/> (referer: http://www.wuxiaworld.com/desolate-era-index/)
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/atg-index/atg-chapter-300/> (referer: http://www.wuxiaworld.com/atg-index/)
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/st-index/st-book-1-chapter-1/> from <GET http://www.wuxiaworld.com/st-index/st-book-1-chapter-1>
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/absolute-choice-index/ac-chapter-1/> from <GET http://www.wuxiaworld.com/absolute-choice-index/ac-chapter-1>
+2017-04-03 19:39:23 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/hjc-index/hjc-chapter-1-1/>
+{'id': u'30490',
+ 'name': u'HJC \u2013 Book 1, Chapter 1.1',
+ 'parent_book_id': u'30488',
+ 'parent_book_name': u'Heavenly Jewel Change'}
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/master-index/dkwss-chapter-1/> (referer: http://www.wuxiaworld.com/dkwss/)
+2017-04-03 19:39:23 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/cdindex-html/book-1-chapter-1/> from <GET http://www.wuxiaworld.com/cdindex-html/book-1-chapter-1>
+2017-04-03 19:39:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/col-index/col-volume-1-chapter-1/> (referer: http://www.wuxiaworld.com/col-index/)
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/emperor-index/emperor-chapter-1/>
+{'id': u'81608',
+ 'name': u'Emperor Chapter 1',
+ 'parent_book_id': u'81606',
+ 'parent_book_name': u'Emperor\u2019s Domination'}
+2017-04-03 19:39:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/tymyd-index/chapter-1/> (referer: http://www.wuxiaworld.com/tymyd-index/)
+2017-04-03 19:39:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/st-index/st-book-1-chapter-1/> (referer: http://www.wuxiaworld.com/st-index/)
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/gor-index/gor-chapter-1/>
+{'id': u'57420',
+ 'name': u'GOR \u2013 Chapter 1',
+ 'parent_book_id': u'57417',
+ 'parent_book_name': u'Gate of Revelation'}
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/wmw-index/wmw-chapter-1/>
+{'id': u'63064',
+ 'name': u'WMW Chapter 1',
+ 'parent_book_id': u'63063',
+ 'parent_book_name': u'Warlock of the Magus World'}
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/truemartialworld-index/tmw-chapter-1/>
+{'id': u'111791',
+ 'name': u'TMW: Chapter 1 \u2013 Grave of Yi Yun',
+ 'parent_book_id': u'110505',
+ 'parent_book_name': u'True Martial World'}
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/ancientgodlymonarch-index/agm-chapter-1/>
+{'id': u'113699',
+ 'name': u'AGM: Chapter 1 \u2013 Cultivation with Broken Meridians',
+ 'parent_book_id': u'114903',
+ 'parent_book_name': u'Ancient Godly Monarch'}
+2017-04-03 19:39:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/cdindex-html/book-1-chapter-1/> (referer: http://www.wuxiaworld.com/cdindex-html/)
+2017-04-03 19:39:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/absolute-choice-index/ac-chapter-1/> (referer: http://www.wuxiaworld.com/absolute-choice-index/)
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/rmji-index/rmji-chapter-1/>
+{'id': u'113368',
+ 'name': u'RMJI: Chapter 1 \u2013 The Village by the Forest',
+ 'parent_book_id': u'114900',
+ 'parent_book_name': u'A Record of a Mortal\u2019s Journey to Immortality'}
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/awe-index/awe-chapter-1/>
+{'id': u'90988',
+ 'name': u'AWE \u2013 Chapter 1',
+ 'parent_book_id': u'90949',
+ 'parent_book_name': u'A Will Eternal'}
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/tcosp-index/tcosp-chapter-1/>
+{'id': u'122759',
+ 'name': u'TCOSP: Chapter 1 \u2013 Nightmare Island',
+ 'parent_book_id': u'122871',
+ 'parent_book_name': u'The Charm of Soul Pets'}
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/ast-index/ast-chapter-1/>
+{'id': u'114099',
+ 'name': u'AST: Chapter 1 \u2013 Qing Clan, Qing Shui',
+ 'parent_book_id': u'114905',
+ 'parent_book_name': u'Ancient Strengthening Technique'}
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/desolate-era-index/de-book-1-chapter-1/>
+{'id': u'23250',
+ 'name': u'DE Book 1, Chapter 1',
+ 'parent_book_id': u'23248',
+ 'parent_book_name': u'Desolate Era'}
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/atg-index/atg-chapter-300/>
+{'id': u'39048',
+ 'name': u'ATG \u2013 Chapter 300',
+ 'parent_book_id': u'13933',
+ 'parent_book_name': u'Against the Gods'}
+2017-04-03 19:39:24 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.wuxiaworld.com/tymyd-index/chapter-1/> from <GET http://www.wuxiaworld.com/master-index/chapter-1>
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/master-index/dkwss-chapter-1/>
+{'id': u'6681',
+ 'name': u'DKWSS \u2013 Chapter 1',
+ 'parent_book_id': u'11475',
+ 'parent_book_name': u'Dragon King With Seven Stars'}
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/col-index/col-volume-1-chapter-1/>
+{'id': u'30694',
+ 'name': u'COL Volume 1: Chapter 1',
+ 'parent_book_id': u'30692',
+ 'parent_book_name': u'Child of Light'}
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/tymyd-index/chapter-1/>
+{'id': u'2193',
+ 'name': u'Chapter 1',
+ 'parent_book_id': u'2166',
+ 'parent_book_name': u'Horizon, Bright Moon, Sabre'}
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/st-index/st-book-1-chapter-1/>
+{'id': u'5739',
+ 'name': u'ST Book 1 Chapter 1',
+ 'parent_book_id': u'4993',
+ 'parent_book_name': u'Stellar Transformations'}
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/cdindex-html/book-1-chapter-1/>
+{'id': u'25',
+ 'name': u'Book 1, Chapter 1',
+ 'parent_book_id': u'2',
+ 'parent_book_name': u'Coiling Dragon'}
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/absolute-choice-index/ac-chapter-1/>
+{'id': u'91870',
+ 'name': u'AC Chapter 1',
+ 'parent_book_id': u'91838',
+ 'parent_book_name': u'Absolute Choice'}
+2017-04-03 19:39:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/uts-index/uts-book-1-chapter-1-1/> (referer: http://www.wuxiaworld.com/uts-index/)
+2017-04-03 19:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.wuxiaworld.com/uts-index/uts-book-1-chapter-1-1/>
+{'id': u'108066',
+ 'name': u'UTS Book 1, Chapter 1.1',
+ 'parent_book_id': u'95056',
+ 'parent_book_name': u'The Unrivaled Tang Sect'}
+2017-04-03 19:39:24 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-04-03 19:39:24 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 55070,
+ 'downloader/request_count': 159,
+ 'downloader/request_method_count/GET': 159,
+ 'downloader/response_bytes': 2750414,
+ 'downloader/response_count': 159,
+ 'downloader/response_status_count/200': 109,
+ 'downloader/response_status_count/301': 50,
+ 'dupefilter/filtered': 11,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 4, 3, 23, 39, 24, 596291),
+ 'item_dropped_count': 17,
+ 'item_dropped_reasons_count/DropItem': 17,
+ 'item_scraped_count': 90,
+ 'log_count/DEBUG': 252,
+ 'log_count/ERROR': 18,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 17,
+ 'offsite/domains': 1,
+ 'offsite/filtered': 1,
+ 'request_depth_max': 2,
+ 'response_received_count': 109,
+ 'scheduler/dequeued': 159,
+ 'scheduler/dequeued/memory': 159,
+ 'scheduler/enqueued': 159,
+ 'scheduler/enqueued/memory': 159,
+ 'start_time': datetime.datetime(2017, 4, 3, 23, 39, 21, 78278)}
+2017-04-03 19:39:24 [scrapy.core.engine] INFO: Spider closed (finished)
+2017-04-03 19:53:39 [scrapy.utils.log] INFO: Scrapy 1.3.3 started (bot: wuxia)
+2017-04-03 19:53:39 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'wuxia.spiders', 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter', 'SPIDER_MODULES': ['wuxia.spiders'], 'BOT_NAME': 'wuxia', 'LOGSTATS_INTERVAL': 0, 'LOG_FILE': 'log.txt'}
+2017-04-03 19:53:39 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-04-03 19:53:39 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-04-03 19:53:39 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-04-03 19:53:39 [scrapy.middleware] INFO: Enabled item pipelines:
+['wuxia.pipelines.IdPipeline',
+ 'wuxia.pipelines.DuplicatedPipeline',
+ 'wuxia.pipelines.BookNamePipeline',
+ 'wuxia.pipelines.SqlitePipeline']
+2017-04-03 19:53:39 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-04-03 19:53:39 [scrapy.core.engine] INFO: Spider opened
+2017-04-03 19:53:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.wuxiaworld.com/master-index/hsnt-chapter-13/> (referer: None)

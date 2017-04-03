@@ -66,7 +66,7 @@ ROBOTSTXT_OBEY = False
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'wuxia.pipelines.IdPipeline': 1,
-    'wuxia.pipelines.DuplicatedBookPipeline':2,
+    'wuxia.pipelines.DuplicatedPipeline':2,
     'wuxia.pipelines.BookNamePipeline': 3,
     'wuxia.pipelines.SqlitePipeline': 4,
 }
@@ -91,3 +91,6 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+# Set log file
+LOG_FILE="log.txt"

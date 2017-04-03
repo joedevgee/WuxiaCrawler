@@ -9,11 +9,6 @@ import scrapy
 from scrapy.loader.processors import Join, MapCompose, TakeFirst
 from w3lib.html import remove_tags
 
-class WuxiaItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
-
 class BookItem(scrapy.Item):
     id = scrapy.Field(
         output_processor = TakeFirst(),
@@ -31,3 +26,16 @@ class BookItem(scrapy.Item):
         output_processor = TakeFirst(),
     )
 
+class ChapterItem(scrapy.Item):
+    id = scrapy.Field(
+        output_processor = TakeFirst(),
+    )
+    name = scrapy.Field(
+        output_processor = TakeFirst(),
+    )
+    parent_book_id = scrapy.Field(
+        output_processor = TakeFirst(),
+    )
+    parent_book_name = scrapy.Field(
+        output_processor = TakeFirst(),
+    )
