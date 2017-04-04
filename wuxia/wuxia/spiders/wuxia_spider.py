@@ -31,12 +31,12 @@ class WuxiaSpider(scrapy.Spider):
         yield l.load_item()
 
         # Scrape chapters link
-        first_chapter = response.xpath('//a/@href').re_first(r'http.+\w+\Wchapter\W\d+')
-        init_chapter_request = scrapy.Request(first_chapter,callback=self.parse_chapters)
-        # Send book id for chapters as reference to parent book
-        init_chapter_request.meta['book_id'] = response.xpath('//link[@rel="shortlink"]/@href').re_first('p\D(\d+)')
-        init_chapter_request.meta['book_name'] = response.xpath('//meta[@property="og:title"]/@content').extract_first()
-        yield init_chapter_request
+        for chapter_link in response.xpath('//a/@href').re(r'http.+\w+\Wchapter\W\d+'):
+            init_chapter_request = scrapy.Request(chapter_link,callback=self.parse_chapters)
+            # Send book id for chapters as reference to parent book
+            init_chapter_request.meta['book_id'] = response.xpath('//link[@rel="shortlink"]/@href').re_first('p\D(\d+)')
+            init_chapter_request.meta['book_name'] = response.xpath('//meta[@property="og:title"]/@content').extract_first()
+            yield init_chapter_request
             
     def parse_chapters(self, response):
         l = ItemLoader(item=ChapterItem(), response=response)
@@ -45,4 +45,12 @@ class WuxiaSpider(scrapy.Spider):
         l.add_value('parent_book_id', response.meta['book_id'])
         l.add_value('parent_book_name', response.meta['book_name'])
         yield l.load_item()
+
+        # retrieve previous and next chapter links
+        for chapter_link in response.xpath('//div[@itemprop="articleBody"]/p/a/@href').extract():
+            if chapter_link is not None:
+                new_request = scrapy.Request(chapter_link,callback=self.parse_chapters)
+                new_request.meta['book_id'] = response.meta['book_id']
+                new_request.meta['book_name'] = response.meta['book_name']
+                yield new_request
     
