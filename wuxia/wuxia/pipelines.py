@@ -30,10 +30,14 @@ class DuplicatedPipeline(object):
             if item['id'] in self.books_seen:
                 logging.error("Duplicate book found: %s" % item)
                 raise DropItem("Duplicate book found: %s" % item)
+            else:
+                self.books_seen.add(item['id'])
         elif isinstance(item, ChapterItem):
             if item['id'] in self.chapters_seen:
                 logging.error("Duplicate book found: %s" % item)
                 raise DropItem("Duplicate chapter found: %s" % item)
+            else:
+                self.chapters_seen.add(item['id'])
         return item
 
 class BookNamePipeline(object):
