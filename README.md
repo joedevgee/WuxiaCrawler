@@ -13,3 +13,8 @@ pip install -r requirements.txt
 cd wuxia
 scrapy crawl Spider
 ```
+
+### To run a sheel
+```bash
+scrapy shell 'www.example.com'
+```

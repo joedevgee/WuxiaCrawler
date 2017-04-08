@@ -35,7 +35,7 @@ class WuxiaSpider(scrapy.Spider):
         book_name = response.xpath('//meta[@property="og:title"]/@content').extract_first()
         article_body = response.xpath('//div[@itemprop="articleBody"]')
         # Scrape chapters link
-        for chapter_link in article_body.xpath('.//a/@href').extract():
+        for chapter_link in article_body.xpath('.//a/@href').extract(): # For test purpose, only get the first one
             yield self.follow_chapter_link(chapter_link,book_id,book_name)
             
     def parse_chapters(self, response):
@@ -44,17 +44,17 @@ class WuxiaSpider(scrapy.Spider):
         l.add_xpath('name', '//meta[@property="og:title"]/@content')
         l.add_value('parent_book_id', response.meta['book_id'])
         l.add_value('parent_book_name', response.meta['book_name'])
+        article_body = response.xpath('//div[@itemprop="articleBody"]/p').extract()
+        l.add_value('article_html',article_body)
+        l.add_value('article_footer','<br>')
+        l.add_xpath('article_footer','//div[@itemprop="articleBody"]/text()',re='\W\d+\W.+')
         yield l.load_item()
 
         book_id = response.meta['book_id']
         book_name = response.meta['book_name']
 
-        # retrieve previous chapter links
-        for chapter_link in response.xpath('//div[@itemprop="articleBody"]/p/a/@href').extract():
-            if chapter_link is not None:
-                yield self.follow_chapter_link(chapter_link,book_id,book_name)
-        # retrieve next chapter links
-        for chapter_link in response.xpath('//div[@itemprop="articleBody"]/p/span/a/@href').extract():
+        # retrieve previous and next chapter links
+        for chapter_link in response.xpath('//div[@itemprop="articleBody"]/p/a/@href').extract() + response.xpath('//div[@itemprop="articleBody"]/p/span/a/@href').extract():
             if chapter_link is not None:
                 yield self.follow_chapter_link(chapter_link,book_id,book_name)
 

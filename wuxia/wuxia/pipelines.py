@@ -79,7 +79,7 @@ class SqlitePipeline(object):
                 print("Failed to insert book: %s" % item)
         elif isinstance(item, ChapterItem):
             try:
-                self.cur.execute('insert into chapters values(?,?,?,?)',(item['id'],item['name'],item['parent_book_id'],item['parent_book_name']))
+                self.cur.execute('insert into chapters values(?,?,?,?,?,?)',(item['id'],item['name'],item['parent_book_id'],item['parent_book_name'],item['article_html'],item['article_footer']))
                 self.con.commit()
             except:
                 print("Failed to insert chapter: %s" % item)
@@ -94,7 +94,7 @@ class SqlitePipeline(object):
  
     def createTable(self):
         self.cur.execute("""create table if not exists books (id INTEGER PRIMARY KEY NOT NULL,name TEXT NOT NULL,description TEXT NOT NULL,published_time TEXT NOT NULL,modified_time TEXT NOT NULL)""")
-        self.cur.execute("""create table if not exists chapters (id INTEGER PRIMARY KEY NOT NULL,name TEXT NOT NULL, parent_book_id INTEGER NOT NULL, parent_book_name TEXT NOT NULL)""")
+        self.cur.execute("""create table if not exists chapters (id INTEGER PRIMARY KEY NOT NULL,name TEXT NOT NULL, parent_book_id INTEGER NOT NULL, parent_book_name TEXT NOT NULL, article_html TEXT NOT NULL, article_footer TEXT)""")
     
     def dropTable(self):
         self.cur.execute("DROP TABLE IF EXISTS books")
