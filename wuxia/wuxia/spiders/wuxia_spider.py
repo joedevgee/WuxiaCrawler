@@ -46,8 +46,12 @@ class WuxiaSpider(scrapy.Spider):
         l.add_value('parent_book_name', response.meta['book_name'])
         article_body = response.xpath('//div[@itemprop="articleBody"]/p').extract()
         l.add_value('article_html',article_body)
-        l.add_value('article_footer','<br>')
-        l.add_xpath('article_footer','//div[@itemprop="articleBody"]/text()',re='\W\d+\W.+')
+        l.add_xpath('article_html','//div[@id="chapterContent"]/p')
+        l.add_xpath('article_footer','//div[@class="footnotes"]/ol/li/text()')
+        l.add_xpath('article_footer','//div[@itemprop="articleBody"]/text()',re='\[\d+\](.+)')
+        l.add_xpath('article_footer','//div[@itemprop="articleBody"]/div[@id="chapterContent"]/ol/li/text()')
+        l.add_xpath('published_time','//meta[@property="article:published_time"]/@content')
+        l.add_xpath('modified_time','//meta[@property="article:modified_time"]/@content')
         yield l.load_item()
 
         book_id = response.meta['book_id']
