@@ -22,7 +22,7 @@ def string_to_int(value):
     return int(value)
 
 class BookItem(scrapy.Item):
-    id = scrapy.Field(
+    _id = scrapy.Field(
         input_processor = MapCompose(string_to_int),
         output_processor = TakeFirst(),
     )
@@ -30,6 +30,13 @@ class BookItem(scrapy.Item):
         output_processor = TakeFirst(),
     )
     description = scrapy.Field(
+        output_processor = TakeFirst(),
+    )
+    cover_url = scrapy.Field(
+        output_processor = TakeFirst(),
+    )
+    likes = scrapy.Field(
+        input_processor = MapCompose(string_to_int),
         output_processor = TakeFirst(),
     )
     published_time = scrapy.Field(
@@ -65,7 +72,7 @@ def add_li_footer(value):
     return '<li>'+value+'</li>'
 
 class ChapterItem(scrapy.Item):
-    id = scrapy.Field(
+    _id = scrapy.Field(
         input_processor = MapCompose(string_to_int),
         output_processor = TakeFirst(),
     )
@@ -95,4 +102,3 @@ class ChapterItem(scrapy.Item):
         input_processor = MapCompose(string_to_datetime),
         output_processor = TakeFirst(),
     )
-

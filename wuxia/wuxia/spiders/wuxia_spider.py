@@ -23,8 +23,12 @@ class WuxiaSpider(scrapy.Spider):
 
         # Scrape the book item
         l = ItemLoader(item=BookItem(), response=response)
-        l.add_xpath('id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
+        l.add_xpath('_id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
         l.add_xpath('name', '//meta[@property="og:title"]/@content')
+        article_body = response.xpath('//div[@itemprop="articleBody"]')
+        cover_link = article_body.xpath('.//img/@src').extract_first()
+        l.add_value('cover_url',cover_link)
+        l.add_xpath('likes','//div[@id="bar-total"]/text()',re='\s(\d+)\s')
         l.add_xpath('description','//meta[@name="description"]/@content')
         l.add_xpath('published_time','//meta[@property="article:published_time"]/@content')
         l.add_xpath('modified_time','//meta[@property="article:modified_time"]/@content')
@@ -33,14 +37,13 @@ class WuxiaSpider(scrapy.Spider):
         # Send book id for chapters as reference to parent book
         book_id = response.xpath('//link[@rel="shortlink"]/@href').re_first('p\D(\d+)')
         book_name = response.xpath('//meta[@property="og:title"]/@content').extract_first()
-        article_body = response.xpath('//div[@itemprop="articleBody"]')
         # Scrape chapters link
         for chapter_link in article_body.xpath('.//a/@href').extract(): # For test purpose, only get the first one
             yield self.follow_chapter_link(chapter_link,book_id,book_name)
-            
+
     def parse_chapters(self, response):
         l = ItemLoader(item=ChapterItem(), response=response)
-        l.add_xpath('id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
+        l.add_xpath('_id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
         l.add_xpath('name', '//meta[@property="og:title"]/@content')
         l.add_value('parent_book_id', response.meta['book_id'])
         l.add_value('parent_book_name', response.meta['book_name'])

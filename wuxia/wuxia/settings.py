@@ -68,7 +68,7 @@ ITEM_PIPELINES = {
     'wuxia.pipelines.IdPipeline': 1,
     'wuxia.pipelines.DuplicatedPipeline':2,
     'wuxia.pipelines.BookNamePipeline': 3,
-    'wuxia.pipelines.MongoPipeline': 4,
+    'wuxia.pipelines.MongoPipeline': 5,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
