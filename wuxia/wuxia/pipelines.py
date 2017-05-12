@@ -9,12 +9,14 @@ import re
 import logging
 import sqlite3 as lite
 import pymongo
+from scrapy.exporters import JsonItemExporter
 from scrapy.exceptions import DropItem
+
 from wuxia.items import BookItem, ChapterItem
 
 class IdPipeline(object):
     def process_item(self, item, spider):
-        if item['_id']:
+        if item['digit_id']:
             return item
         else:
             logging.error("Id is missing in %s" % item)
@@ -28,17 +30,17 @@ class DuplicatedPipeline(object):
 
     def process_item(self, item, spider):
         if isinstance(item, BookItem):
-            if item['_id'] in self.books_seen:
+            if item['digit_id'] in self.books_seen:
                 logging.error("Duplicate book found: %s" % item)
                 raise DropItem("Duplicate book found: %s" % item)
             else:
-                self.books_seen.add(item['_id'])
+                self.books_seen.add(item['digit_id'])
         elif isinstance(item, ChapterItem):
-            if item['_id'] in self.chapters_seen:
-                logging.error("Duplicate book found: %s" % item)
+            if item['digit_id'] in self.chapters_seen:
+                logging.error("Duplicate chapter found: %s" % item)
                 raise DropItem("Duplicate chapter found: %s" % item)
             else:
-                self.chapters_seen.add(item['_id'])
+                self.chapters_seen.add(item['digit_id'])
         return item
 
 class BookNamePipeline(object):
@@ -61,48 +63,14 @@ class BookNamePipeline(object):
             raise DropItem("This is not a book, missing index in %s" % item)
         return item
 
-con = None  # sqlite db connection
-
-class SqlitePipeline(object):
-
-    def __init__(self):
-        self.setupDBCon()
-        self.dropTable()
-        self.createTable()
-
+# Use this pipeline to get rid of teaser and glossary chapters
+class ValidChapterPipeline(object):
     def process_item(self, item, spider):
-        # If it is BookItem
-        if isinstance(item, BookItem):
-            try:
-                self.cur.execute('insert into books values(?,?,?,?,?,?,?)',(item['id'],item['name'],item['description'],item['published_time'],item['modified_time'],item['cover_url'],item['likes']))
-                self.con.commit()
-            except:
-                print("Failed to insert book: %s" % item)
-        elif isinstance(item, ChapterItem):
-            try:
-                self.cur.execute('insert into chapters values(?,?,?,?,?,?)',(item['id'],item['name'],item['parent_book_id'],item['parent_book_name'],item['article_html'],item['article_footer']))
-                self.con.commit()
-            except:
-                print("Failed to insert chapter: %s" % item)
+        if isinstance(item, ChapterItem) and len('"""' + item['article_html'] + '"""') < 300:
+            # Check article_html for length
+            # Teaser only contains image
+            raise DropItem("This is a teaser chapter in %s" % item)
         return item
-
-    def setupDBCon(self):
-        self.con = lite.connect('wuxia.db')
-        self.cur = self.con.cursor()
-
-    def __del__(self):
-        self.closeDB()
-
-    def createTable(self):
-        self.cur.execute("""create table if not exists books (id INTEGER PRIMARY KEY NOT NULL,name TEXT NOT NULL,description TEXT NOT NULL,published_time TEXT NOT NULL,modified_time TEXT NOT NULL)""")
-        self.cur.execute("""create table if not exists chapters (id INTEGER PRIMARY KEY NOT NULL,name TEXT NOT NULL, parent_book_id INTEGER NOT NULL, parent_book_name TEXT NOT NULL, article_html TEXT NOT NULL, article_footer TEXT)""")
-
-    def dropTable(self):
-        self.cur.execute("DROP TABLE IF EXISTS books")
-        self.cur.execute("DROP TABLE IF EXISTS chapters")
-
-    def closeDB(self):
-        self.con.close()
 
 
 class MongoPipeline(object):

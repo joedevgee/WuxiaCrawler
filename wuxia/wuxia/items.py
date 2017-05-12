@@ -22,7 +22,7 @@ def string_to_int(value):
     return int(value)
 
 class BookItem(scrapy.Item):
-    _id = scrapy.Field(
+    digit_id = scrapy.Field(
         input_processor = MapCompose(string_to_int),
         output_processor = TakeFirst(),
     )
@@ -48,6 +48,13 @@ class BookItem(scrapy.Item):
         output_processor = TakeFirst(),
     )
 
+def replace_digit_id(value):
+    digit_dict = {42353:42355, 42354: 42353, 42355: 42356, 42356: 42354}
+    if value in digit_dict:
+        return digit_dict[value]
+    else:
+        return value
+
 def replace_nav_header(value):
     # clean previous chapter and next chapter link
     head = value
@@ -63,8 +70,7 @@ def replace_ch_title(value):
 def replace_jump_footer(value):
     # clean contents inside <sup>...</sup>
     article = value
-    article = re.sub("\s*class.+\(\d+\)\W","",article)
-    article = re.sub("\<\/a\>","",article)
+    article = remove_tags(article, keep=('p','i'))
     return article
 
 def add_li_footer(value):
@@ -72,8 +78,8 @@ def add_li_footer(value):
     return '<li>'+value+'</li>'
 
 class ChapterItem(scrapy.Item):
-    _id = scrapy.Field(
-        input_processor = MapCompose(string_to_int),
+    digit_id = scrapy.Field(
+        input_processor = MapCompose(string_to_int, replace_digit_id),
         output_processor = TakeFirst(),
     )
     name = scrapy.Field(

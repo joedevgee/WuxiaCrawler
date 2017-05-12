@@ -23,7 +23,7 @@ class WuxiaSpider(scrapy.Spider):
 
         # Scrape the book item
         l = ItemLoader(item=BookItem(), response=response)
-        l.add_xpath('_id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
+        l.add_xpath('digit_id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
         l.add_xpath('name', '//meta[@property="og:title"]/@content')
         article_body = response.xpath('//div[@itemprop="articleBody"]')
         cover_link = article_body.xpath('.//img/@src').extract_first()
@@ -38,13 +38,13 @@ class WuxiaSpider(scrapy.Spider):
         book_id = response.xpath('//link[@rel="shortlink"]/@href').re_first('p\D(\d+)')
         book_name = response.xpath('//meta[@property="og:title"]/@content').extract_first()
         # Scrape chapters link
-        for chapter_link in article_body.xpath('.//a/@href').extract(): # For test purpose, only get the first one
-            yield self.follow_chapter_link(chapter_link,book_id,book_name)
+        # for chapter_link in article_body.xpath('.//a/@href').extract(): # For test purpose, only get the first one
+        #     yield self.follow_chapter_link(chapter_link,book_id,book_name)
 
     def parse_chapters(self, response):
         l = ItemLoader(item=ChapterItem(), response=response)
-        l.add_xpath('_id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
-        l.add_xpath('name', '//meta[@property="og:title"]/@content')
+        l.add_xpath('digit_id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
+        l.add_xpath('name', '//meta[@property="og:title"]/@content', re='.+(\whapter.+)')
         l.add_value('parent_book_id', response.meta['book_id'])
         l.add_value('parent_book_name', response.meta['book_name'])
         article_body = response.xpath('//div[@itemprop="articleBody"]/p').extract()
