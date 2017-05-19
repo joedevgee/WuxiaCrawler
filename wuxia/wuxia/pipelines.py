@@ -9,6 +9,7 @@ import re
 import logging
 import sqlite3 as lite
 import pymongo
+from google.cloud import datastore
 from scrapy.exporters import JsonItemExporter
 from scrapy.exceptions import DropItem
 
@@ -16,7 +17,7 @@ from wuxia.items import BookItem, ChapterItem
 
 class IdPipeline(object):
     def process_item(self, item, spider):
-        if item['digit_id']:
+        if item['id']:
             return item
         else:
             logging.error("Id is missing in %s" % item)
@@ -30,17 +31,17 @@ class DuplicatedPipeline(object):
 
     def process_item(self, item, spider):
         if isinstance(item, BookItem):
-            if item['digit_id'] in self.books_seen:
+            if item['id'] in self.books_seen:
                 logging.error("Duplicate book found: %s" % item)
                 raise DropItem("Duplicate book found: %s" % item)
             else:
-                self.books_seen.add(item['digit_id'])
+                self.books_seen.add(item['id'])
         elif isinstance(item, ChapterItem):
-            if item['digit_id'] in self.chapters_seen:
+            if item['id'] in self.chapters_seen:
                 logging.error("Duplicate chapter found: %s" % item)
                 raise DropItem("Duplicate chapter found: %s" % item)
             else:
-                self.chapters_seen.add(item['digit_id'])
+                self.chapters_seen.add(item['id'])
         return item
 
 class BookNamePipeline(object):
@@ -104,3 +105,30 @@ class MongoPipeline(object):
         elif isinstance(item, ChapterItem):
             self.db[self.chapters_collection_name].insert(dict(item))
         return item
+
+class GoogleDatastorePipeline(object):
+
+    def __init__(self, datastore_id):
+        self.datastore_id = datastore_id
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(
+            datastore_id = crawler.settings.get('GDATASTORE_ID')
+        )
+
+    def open_spider(self, spider):
+        self.client = datastore.Client(self.datastore_id)
+
+    def process_item(self, item, spider):
+        if isinstance(item, BookItem):
+            key = self.client.key('Book', item['id'])
+            book = datastore.Entity(key, exclude_from_indexes=['description','cover_url','id'])
+            book.update(dict(item))
+            self.client.put(book)
+        if isinstance(item, ChapterItem):
+            parent_key = self.client.key('Book', item['parent_book_id'])
+            key = self.client.key('Chapter', item['id'], parent=parent_key)
+            chapter = datastore.Entity(key, exclude_from_indexes=['id','article_html','article_footer'])
+            chapter.update(dict(item))
+            self.client.put(chapter)

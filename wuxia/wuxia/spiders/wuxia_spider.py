@@ -2,6 +2,7 @@ import scrapy
 from scrapy.loader import ItemLoader
 from wuxia.items import BookItem, ChapterItem
 
+# crawler for wuxia.com
 class WuxiaSpider(scrapy.Spider):
 
     name = 'Spider'
@@ -23,7 +24,7 @@ class WuxiaSpider(scrapy.Spider):
 
         # Scrape the book item
         l = ItemLoader(item=BookItem(), response=response)
-        l.add_xpath('digit_id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
+        l.add_xpath('id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
         l.add_xpath('name', '//meta[@property="og:title"]/@content')
         article_body = response.xpath('//div[@itemprop="articleBody"]')
         cover_link = article_body.xpath('.//img/@src').extract_first()
@@ -43,7 +44,7 @@ class WuxiaSpider(scrapy.Spider):
 
     def parse_chapters(self, response):
         l = ItemLoader(item=ChapterItem(), response=response)
-        l.add_xpath('digit_id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
+        l.add_xpath('id', '//link[@rel="shortlink"]/@href',re='p\D(\d+)')
         l.add_xpath('name', '//meta[@property="og:title"]/@content', re='.+(\whapter.+)')
         l.add_value('parent_book_id', response.meta['book_id'])
         l.add_value('parent_book_name', response.meta['book_name'])
@@ -70,3 +71,35 @@ class WuxiaSpider(scrapy.Spider):
         new_request.meta['book_id'] = book_id
         new_request.meta['book_name'] = book_name
         return new_request
+
+
+
+# Crawler for webnovel.com (qidian international)
+class QidianSpider(scrapy.Spider):
+
+    name = 'Qidian'
+
+    allowed_domains = [
+        'webnovel.com'
+    ]
+
+    start_urls = [
+        'http://www.webnovel.com/popular'
+    ]
+
+    def parse(self, response):
+
+        # Follow book link
+        for book in response.xpath('//li[@class="g_col_6"]/div/a[@class="c_strong"]/@href').extract():
+            book_link = response.urljoin(book)
+            yield scrapy.Request(book_link, callback = self.parse_book)
+
+        for category in response.xpath('//div[@class="g_wrap pr"]/p/a/@href').extract():
+            category_link = response.urljoin(category)
+            yield scrapy.Request(category_link, callback = self.parse)
+
+    def parse_book(self, response):
+        l = ItemLoader(item = BookItem(), response = response)
+        l.add_xpath('id', '')
+        l.add_xpath('name', '//h2[@class="mb15 lh1d2 oh"]/text()')
+        print(book_name)

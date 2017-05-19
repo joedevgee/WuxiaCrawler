@@ -69,7 +69,8 @@ ITEM_PIPELINES = {
     'wuxia.pipelines.DuplicatedPipeline':2,
     'wuxia.pipelines.BookNamePipeline': 3,
     'wuxia.pipelines.ValidChapterPipeline': 4,
-    'wuxia.pipelines.MongoPipeline': 5,
+    'wuxia.pipelines.GoogleDatastorePipeline': 5,
+    # 'wuxia.pipelines.MongoPipeline': 5,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -99,3 +100,7 @@ LOG_FILE="log.txt"
 # Configure MongoDB connection
 MONGODB_URI = "mongodb://localhost:27017"
 MONGODB_DB = "wuxia"
+
+# Configure local google datastore emulators
+GDATASTORE_URI = "http://localhost:8804/"
+GDATASTORE_ID = "webnovels-512"

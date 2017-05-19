@@ -22,7 +22,7 @@ def string_to_int(value):
     return int(value)
 
 class BookItem(scrapy.Item):
-    digit_id = scrapy.Field(
+    id = scrapy.Field(
         input_processor = MapCompose(string_to_int),
         output_processor = TakeFirst(),
     )
@@ -78,7 +78,7 @@ def add_li_footer(value):
     return '<li>'+value+'</li>'
 
 class ChapterItem(scrapy.Item):
-    digit_id = scrapy.Field(
+    id = scrapy.Field(
         input_processor = MapCompose(string_to_int, replace_digit_id),
         output_processor = TakeFirst(),
     )
